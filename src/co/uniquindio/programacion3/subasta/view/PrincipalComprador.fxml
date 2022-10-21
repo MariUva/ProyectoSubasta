@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="666.0" prefWidth="1281.0">
+         <children>
+            <VBox prefHeight="659.0" prefWidth="265.0">
+               <children>
+                  <AnchorPane prefHeight="662.0" prefWidth="266.0" style="-fx-background-color: #191a19;">
+                     <children>
+                        <Button layoutY="216.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="PRINCIPAL" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnSalir" layoutY="551.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="SALIR" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnMisPujas" layoutY="273.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="MIS PUJAS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnMisCompras" layoutY="331.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="MIS COMPRAS" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="666.0" prefWidth="715.0">
+               <children>
+                  <AnchorPane prefHeight="659.0" prefWidth="980.0" style="-fx-background-color: #141414;">
+                     <children>
+                        <ImageView fitHeight="702.0" fitWidth="1282.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/fondo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="50.0" layoutY="71.0" prefHeight="74.0" prefWidth="337.0" text="Comprador" textFill="#e8e8e8">
+                           <font>
+                              <Font name="Arial Bold" size="47.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtBuscarProducto" layoutX="191.0" layoutY="157.0" prefWidth="281.0" style="-fx-background-color: #858585;" />
+                        <Label layoutX="62.0" layoutY="164.0" text="Buscar producto" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tablaComprador" layoutX="50.0" layoutY="200.0" prefHeight="372.0" prefWidth="548.0" style="-fx-background-color: #8f8e8c;">
+                           <columns>
+                              <TableColumn prefWidth="106.0" text="Nombre" />
+                              <TableColumn prefWidth="295.0" text="Descripción" />
+                              <TableColumn text="Precio" />
+                              <TableColumn prefWidth="73.0" text="Pujantes" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnOfrecer" layoutX="540.0" layoutY="585.0" mnemonicParsing="false" style="-fx-background-color: #d4cc5f;" text="Ofrecer" textFill="#36310c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="25.0" fitWidth="396.0" layoutX="373.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/title2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="150.0" layoutX="491.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/title1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
