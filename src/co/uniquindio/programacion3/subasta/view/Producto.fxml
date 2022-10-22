@@ -8,7 +8,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1189.0" style="-fx-background-color: #191a19;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="1189.0" style="-fx-background-color: #191a19;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.programacion3.subasta.controller.ProductoController">
    <children>
       <AnchorPane layoutX="-47.0" layoutY="-35.0">
          <children>
@@ -56,7 +56,6 @@
                </font>
             </TextField>
             <Label layoutX="127.0" layoutY="255.0" prefHeight="246.0" prefWidth="210.0" style="-fx-border-color: #ffffff;" />
-            <ChoiceBox layoutX="423.0" layoutY="335.0" prefHeight="25.0" prefWidth="258.0" style="-fx-background-color: #b5b5b5;" />
             <Button layoutX="183.0" layoutY="515.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleBoton.css" text="Cargar imagen">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -94,7 +93,7 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="214.0" layoutY="587.0" prefHeight="36.0" prefWidth="136.0" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleField.css">
+            <TextField layoutX="214.0" layoutY="587.0" prefHeight="36.0" prefWidth="136.0" promptText="\$$$" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleField.css">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
@@ -119,13 +118,18 @@
                   <Font name="Arial Bold" size="17.0" />
                </font>
             </Label>
+            <ComboBox layoutX="427.0" layoutY="332.0" prefHeight="31.0" prefWidth="258.0" stylesheets="@../styles/StyleComboBox.css" />
+            <Button fx:id="btnAtras" layoutX="26.0" layoutY="59.0" mnemonicParsing="false" onAction="#abrirVentanaAnunciante" stylesheets="@../styles/StyleBoton2.css">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/atras.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="44.0" fitWidth="66.0" layoutX="-19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/atras.png" />
-         </image>
-      </ImageView>
       <TableView layoutX="702.0" layoutY="235.0" prefHeight="372.0" prefWidth="439.0" stylesheets="@../styles/StyleTabla.css">
          <columns>
             <TableColumn prefWidth="75.0" text="Nombre" />

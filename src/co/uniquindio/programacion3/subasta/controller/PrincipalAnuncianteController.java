@@ -54,7 +54,7 @@ public class PrincipalAnuncianteController {
 
     @FXML
     void ventanaCrearProducto(ActionEvent event) {
-
+    	aplicacion.ventanaProducto();
     }
 
     @FXML
