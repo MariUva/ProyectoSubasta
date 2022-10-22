@@ -38,12 +38,12 @@
             <Image url="@../images/Cuadro.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnAnunciante" layoutX="651.0" layoutY="252.0" mnemonicParsing="false" onAction="#abrirPrincipalAnunciante" style="-fx-background-color: #b5b5b5;" text="Anunciante">
+      <Button fx:id="btnAnunciante" layoutX="615.0" layoutY="256.0" mnemonicParsing="false" onAction="#abrirPrincipalAnunciante" prefHeight="43.0" prefWidth="173.0" stylesheets="@../styles/StyleBoton.css" text="Anunciante">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnComprador" layoutX="651.0" layoutY="304.0" mnemonicParsing="false" onAction="#abrirPrincipalComprador" style="-fx-background-color: #b5b5b5;" text="Comprador">
+      <Button fx:id="btnComprador" layoutX="611.0" layoutY="318.0" mnemonicParsing="false" onAction="#abrirPrincipalComprador" prefHeight="43.0" prefWidth="181.0" stylesheets="@../styles/StyleBoton.css" text="Comprador">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

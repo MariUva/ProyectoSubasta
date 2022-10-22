@@ -7,15 +7,15 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.programacion3.subasta.controller.PrincipalCompradorController">
    <children>
-      <HBox prefHeight="666.0" prefWidth="1281.0">
+      <HBox prefHeight="666.0" prefWidth="1490.0">
          <children>
             <VBox prefHeight="659.0" prefWidth="265.0">
                <children>
                   <AnchorPane prefHeight="662.0" prefWidth="266.0" style="-fx-background-color: #191a19;">
                      <children>
-                        <Button layoutY="216.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="PRINCIPAL" textFill="WHITE">
+                        <Button layoutX="7.0" layoutY="216.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="PRINCIPAL" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -25,17 +25,17 @@
                               <Image url="@../images/LOGO.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnSalir" layoutY="551.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="SALIR" textFill="WHITE">
+                        <Button fx:id="btnSalir" layoutX="7.0" layoutY="551.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #5e211c;" stylesheets="@../styles/StyleBoton.css" text="SALIR" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnMisPujas" layoutY="273.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="MIS PUJAS" textFill="WHITE">
+                        <Button fx:id="btnMisPujas" layoutX="7.0" layoutY="273.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="MIS PUJAS" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnMisCompras" layoutY="331.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="MIS COMPRAS" textFill="WHITE">
+                        <Button fx:id="btnMisCompras" layoutX="9.0" layoutY="331.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="MIS COMPRAS" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -46,7 +46,7 @@
             </VBox>
             <VBox prefHeight="666.0" prefWidth="715.0">
                <children>
-                  <AnchorPane prefHeight="659.0" prefWidth="980.0" style="-fx-background-color: #141414;">
+                  <AnchorPane prefHeight="757.0" prefWidth="1282.0" style="-fx-background-color: #141414;">
                      <children>
                         <ImageView fitHeight="702.0" fitWidth="1282.0" opacity="0.12" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -58,21 +58,21 @@
                               <Font name="Arial Bold" size="47.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="txtBuscarProducto" layoutX="191.0" layoutY="157.0" prefWidth="281.0" style="-fx-background-color: #858585;" />
+                        <TextField fx:id="txtBuscarProducto" layoutX="191.0" layoutY="157.0" prefHeight="31.0" prefWidth="403.0" style="-fx-background-color: #858585;" stylesheets="@../styles/StyleField.css" />
                         <Label layoutX="62.0" layoutY="164.0" text="Buscar producto" textFill="WHITE">
                            <font>
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="tablaComprador" layoutX="50.0" layoutY="200.0" prefHeight="372.0" prefWidth="548.0" style="-fx-background-color: #8f8e8c;">
+                        <TableView fx:id="tablaComprador" layoutX="50.0" layoutY="200.0" prefHeight="359.0" prefWidth="548.0" stylesheets="@../styles/StyleTabla.css">
                            <columns>
                               <TableColumn prefWidth="106.0" text="Nombre" />
-                              <TableColumn prefWidth="295.0" text="Descripción" />
-                              <TableColumn text="Precio" />
-                              <TableColumn prefWidth="73.0" text="Pujantes" />
+                              <TableColumn prefWidth="265.0" text="Descripción" />
+                              <TableColumn prefWidth="69.0" text="Precio" />
+                              <TableColumn prefWidth="114.0" text="Pujantes" />
                            </columns>
                         </TableView>
-                        <Button fx:id="btnOfrecer" layoutX="540.0" layoutY="585.0" mnemonicParsing="false" style="-fx-background-color: #d4cc5f;" text="Ofrecer" textFill="#36310c">
+                        <Button fx:id="btnOfrecer" layoutX="526.0" layoutY="568.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #5e4f1c;" stylesheets="@../styles/StyleBoton.css" text="Ofrecer" textFill="#363008">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

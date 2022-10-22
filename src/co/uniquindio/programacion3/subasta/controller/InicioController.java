@@ -1,7 +1,7 @@
 package co.uniquindio.programacion3.subasta.controller;
+
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import co.uniquindio.programacion3.subasta.application.Aplicacion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

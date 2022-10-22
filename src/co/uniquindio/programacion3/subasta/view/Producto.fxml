@@ -50,14 +50,14 @@
                   <Font name="Arial Bold" size="27.0" />
                </font>
             </Label>
-            <TextField layoutX="369.0" layoutY="285.0" prefHeight="25.0" prefWidth="314.0" promptText="Nombre" style="-fx-background-color: #ffffff;">
+            <TextField layoutX="369.0" layoutY="285.0" prefHeight="25.0" prefWidth="314.0" promptText="Nombre" style="-fx-background-color: #ffffff;" stylesheets="@../styles/StyleField.css">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </TextField>
             <Label layoutX="127.0" layoutY="255.0" prefHeight="246.0" prefWidth="210.0" style="-fx-border-color: #ffffff;" />
             <ChoiceBox layoutX="423.0" layoutY="335.0" prefHeight="25.0" prefWidth="258.0" style="-fx-background-color: #b5b5b5;" />
-            <Button layoutX="183.0" layoutY="515.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" text="Cargar imagen">
+            <Button layoutX="183.0" layoutY="515.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleBoton.css" text="Cargar imagen">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -94,22 +94,22 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="214.0" layoutY="587.0" prefHeight="36.0" prefWidth="136.0" style="-fx-background-color: #b5b5b5;">
+            <TextField layoutX="214.0" layoutY="587.0" prefHeight="36.0" prefWidth="136.0" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleField.css">
                <font>
                   <Font name="Arial Bold" size="19.0" />
                </font>
             </TextField>
-            <Button layoutX="625.0" layoutY="592.0" mnemonicParsing="false" style="-fx-background-color: #d4cc5f;" text="Eliminar" textFill="#36310c">
+            <Button layoutX="625.0" layoutY="592.0" mnemonicParsing="false" style="-fx-background-color: #d4cc5f;" stylesheets="@../styles/StyleBoton.css" text="Eliminar" textFill="#36310c">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="560.0" layoutY="592.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" text="Guardar">
+            <Button layoutX="560.0" layoutY="592.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleBoton.css" text="Guardar">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="485.0" layoutY="592.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" text="Modificar">
+            <Button layoutX="485.0" layoutY="592.0" mnemonicParsing="false" style="-fx-background-color: #b5b5b5;" stylesheets="@../styles/StyleBoton.css" text="Modificar">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -126,7 +126,7 @@
             <Image url="@../images/atras.png" />
          </image>
       </ImageView>
-      <TableView layoutX="702.0" layoutY="235.0" prefHeight="372.0" prefWidth="439.0" style="-fx-background-color: #8f8e8c;">
+      <TableView layoutX="702.0" layoutY="235.0" prefHeight="372.0" prefWidth="439.0" stylesheets="@../styles/StyleTabla.css">
          <columns>
             <TableColumn prefWidth="75.0" text="Nombre" />
             <TableColumn prefWidth="199.0" text="Descripción" />

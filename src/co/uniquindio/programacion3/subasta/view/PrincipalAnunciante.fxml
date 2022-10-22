@@ -7,15 +7,15 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.programacion3.subasta.controller.PrincipalAnuncianteController">
    <children>
       <HBox prefHeight="666.0" prefWidth="1281.0">
          <children>
             <VBox prefHeight="659.0" prefWidth="265.0">
                <children>
-                  <AnchorPane prefHeight="662.0" prefWidth="266.0" style="-fx-background-color: #191a19;">
+                  <AnchorPane prefHeight="662.0" prefWidth="301.0" style="-fx-background-color: #191a19;">
                      <children>
-                        <Button layoutY="216.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="PRINCIPAL" textFill="WHITE">
+                        <Button layoutX="10.0" layoutY="216.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRINCIPAL" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -25,29 +25,34 @@
                               <Image url="@../images/LOGO.png" />
                            </image>
                         </ImageView>
-                        <Button layoutY="551.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="SALIR" textFill="WHITE">
+                        <Button fx:id="btnSalir" layoutX="10.0" layoutY="551.0" mnemonicParsing="false" onAction="#ventanaInicio" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #5e211c;" stylesheets="@../styles/StyleBoton.css" text="SALIR" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button layoutY="273.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="CREAR ANUNCIO" textFill="WHITE">
+                        <Button fx:id="btnCrearAnuncio" layoutX="10.0" layoutY="273.0" mnemonicParsing="false" onAction="#ventanaCrearAnuncio" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="CREAR ANUNCIO" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button layoutY="331.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="CREAR PRODUCTO" textFill="WHITE">
+                        <Button fx:id="btnCrearProducto" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#ventanaCrearProducto" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="CREAR PRODUCTO" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button layoutY="388.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="PRODUCTOS EN PUJA" textFill="WHITE">
+                        <Button fx:id="btnProductosPuja" layoutX="10.0" layoutY="388.0" mnemonicParsing="false" onAction="#ventanaProductosPuja" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRODUCTOS EN PUJA" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnMisVentas" layoutX="10.0" layoutY="445.0" mnemonicParsing="false" onAction="#ventanaMisVentas" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="MIS VENTAS" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button layoutY="445.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="266.0" style="-fx-background-color: #252626;" text="MIS VENTAS" textFill="WHITE">
+                        <Button layoutX="5.0" layoutY="607.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="270.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRODUCTOS EN PUJA" textFill="WHITE">
                            <font>
-                              <Font name="System Bold" size="22.0" />
+                              <Font name="System Bold" size="21.0" />
                            </font>
                         </Button>
                      </children>
@@ -73,15 +78,15 @@
                               <Font name="Arial Bold" size="24.0" />
                            </font>
                         </Label>
-                        <TableView layoutX="50.0" layoutY="200.0" prefHeight="372.0" prefWidth="548.0" style="-fx-background-color: #8f8e8c;">
+                        <TableView fx:id="tablaAnunciante" layoutX="50.0" layoutY="200.0" prefHeight="372.0" prefWidth="548.0" stylesheets="@../styles/StyleTabla.css">
                            <columns>
                               <TableColumn prefWidth="106.0" text="Nombre" />
-                              <TableColumn prefWidth="271.0" text="Descripción" />
+                              <TableColumn prefWidth="252.0" text="Descripción" />
                               <TableColumn prefWidth="88.0" text="Precio" />
-                              <TableColumn prefWidth="89.0" text="Pujantes" />
+                              <TableColumn prefWidth="108.0" text="Pujantes" />
                            </columns>
                         </TableView>
-                        <Button layoutX="537.0" layoutY="585.0" mnemonicParsing="false" style="-fx-background-color: #d4cc5f;" text="Eliminar" textFill="#36310c">
+                        <Button fx:id="btnEliminar" layoutX="526.0" layoutY="579.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #5e4f1c;" stylesheets="@../styles/StyleBoton.css" text="Eliminar" textFill="#36310c">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
