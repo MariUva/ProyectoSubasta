@@ -25,12 +25,12 @@ public class InicioController {
 
     @FXML
     void abrirPrincipalAnunciante(ActionEvent event) {
-
+    	aplicacion.ventanaPrincipalAnunciante();
     }
 
     @FXML
     void abrirPrincipalComprador(ActionEvent event) {
-
+    	aplicacion.ventanaPrincipalComprador();
     }
 
     @FXML

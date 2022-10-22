@@ -15,27 +15,27 @@
                <children>
                   <AnchorPane prefHeight="662.0" prefWidth="266.0" style="-fx-background-color: #191a19;">
                      <children>
-                        <Button layoutX="7.0" layoutY="216.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="PRINCIPAL" textFill="WHITE">
+                        <Button layoutX="7.0" layoutY="216.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="PRINCIPAL" textFill="#ababab">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="58.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/LOGO.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnSalir" layoutX="7.0" layoutY="551.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #5e211c;" stylesheets="@../styles/StyleBoton.css" text="SALIR" textFill="WHITE">
+                        <Button fx:id="btnSalir" layoutX="7.0" layoutY="551.0" mnemonicParsing="false" onAction="#ventanaInicio" prefHeight="48.0" prefWidth="191.0" style="-fx-background-color: #5e211c;" stylesheets="@../styles/StyleBoton.css" text="SALIR" textFill="#daa3a3">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnMisPujas" layoutX="7.0" layoutY="273.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="MIS PUJAS" textFill="WHITE">
+                        <Button fx:id="btnMisPujas" layoutX="7.0" layoutY="273.0" mnemonicParsing="false" onAction="#ventanaMisPujas" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="MIS PUJAS" textFill="#ababab">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnMisCompras" layoutX="9.0" layoutY="331.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="MIS COMPRAS" textFill="WHITE">
+                        <Button fx:id="btnMisCompras" layoutX="9.0" layoutY="331.0" mnemonicParsing="false" onAction="#ventanaMisCompras" prefHeight="48.0" prefWidth="191.0" stylesheets="@../styles/StyleBoton.css" text="MIS COMPRAS" textFill="#ababab">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -64,7 +64,7 @@
                               <Font name="Arial Bold" size="15.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="tablaComprador" layoutX="50.0" layoutY="200.0" prefHeight="359.0" prefWidth="548.0" stylesheets="@../styles/StyleTabla.css">
+                        <TableView fx:id="tablaComprador" layoutX="50.0" layoutY="200.0" onSort="#tablaProductosComprador" prefHeight="359.0" prefWidth="548.0" stylesheets="@../styles/StyleTabla.css">
                            <columns>
                               <TableColumn prefWidth="106.0" text="Nombre" />
                               <TableColumn prefWidth="265.0" text="Descripción" />
@@ -72,7 +72,7 @@
                               <TableColumn prefWidth="114.0" text="Pujantes" />
                            </columns>
                         </TableView>
-                        <Button fx:id="btnOfrecer" layoutX="526.0" layoutY="568.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #5e4f1c;" stylesheets="@../styles/StyleBoton.css" text="Ofrecer" textFill="#363008">
+                        <Button fx:id="btnOfrecer" layoutX="526.0" layoutY="568.0" mnemonicParsing="false" onAction="#hacerOferta" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #5e4f1c;" stylesheets="@../styles/StyleBoton.css" text="Ofrecer" textFill="#e8dd9b">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

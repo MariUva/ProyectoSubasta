@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import co.uniquindio.programacion3.subasta.application.Aplicacion;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
@@ -36,6 +37,36 @@ public class PrincipalCompradorController {
 
     @FXML
     private Button btnOfrecer;
+
+    @FXML
+    void ventanaInicio(ActionEvent event) {
+    	aplicacion.ventanaPrincipal();
+    }
+
+    @FXML
+    void ventanaMisPujas(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ventanaMisCompras(ActionEvent event) {
+
+    }
+
+    @FXML
+    void tablaProductosComprador(ActionEvent event) {
+
+    }
+
+    @FXML
+    void hacerOferta(ActionEvent event) {
+
+    }
+
+    @FXML
+    void e8dd9b(ActionEvent event) {
+
+    }
 
     @FXML
     void initialize() {

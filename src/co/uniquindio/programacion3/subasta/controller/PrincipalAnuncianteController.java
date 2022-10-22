@@ -44,7 +44,7 @@ public class PrincipalAnuncianteController {
 
     @FXML
     void ventanaInicio(ActionEvent event) {
-
+    	aplicacion.ventanaPrincipal();
     }
 
     @FXML

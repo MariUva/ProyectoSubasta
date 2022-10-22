@@ -15,7 +15,7 @@
                <children>
                   <AnchorPane prefHeight="662.0" prefWidth="301.0" style="-fx-background-color: #191a19;">
                      <children>
-                        <Button layoutX="10.0" layoutY="216.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRINCIPAL" textFill="WHITE">
+                        <Button layoutX="10.0" layoutY="216.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRINCIPAL" textFill="#c3c0c0">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -25,27 +25,27 @@
                               <Image url="@../images/LOGO.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="btnSalir" layoutX="10.0" layoutY="551.0" mnemonicParsing="false" onAction="#ventanaInicio" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #5e211c;" stylesheets="@../styles/StyleBoton.css" text="SALIR" textFill="WHITE">
+                        <Button fx:id="btnSalir" layoutX="10.0" layoutY="551.0" mnemonicParsing="false" onAction="#ventanaInicio" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #5e211c;" stylesheets="@../styles/StyleBoton.css" text="SALIR" textFill="#e49c9c">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnCrearAnuncio" layoutX="10.0" layoutY="273.0" mnemonicParsing="false" onAction="#ventanaCrearAnuncio" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="CREAR ANUNCIO" textFill="WHITE">
+                        <Button fx:id="btnCrearAnuncio" layoutX="10.0" layoutY="273.0" mnemonicParsing="false" onAction="#ventanaCrearAnuncio" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="CREAR ANUNCIO" textFill="#c3c0c0">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnCrearProducto" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#ventanaCrearProducto" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="CREAR PRODUCTO" textFill="WHITE">
+                        <Button fx:id="btnCrearProducto" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#ventanaCrearProducto" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="CREAR PRODUCTO" textFill="#c3c0c0">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnProductosPuja" layoutX="10.0" layoutY="388.0" mnemonicParsing="false" onAction="#ventanaProductosPuja" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRODUCTOS EN PUJA" textFill="WHITE">
+                        <Button fx:id="btnProductosPuja" layoutX="10.0" layoutY="388.0" mnemonicParsing="false" onAction="#ventanaProductosPuja" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="PRODUCTOS EN PUJA" textFill="#c3c0c0">
                            <font>
                               <Font name="System Bold" size="21.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnMisVentas" layoutX="10.0" layoutY="445.0" mnemonicParsing="false" onAction="#ventanaMisVentas" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="MIS VENTAS" textFill="WHITE">
+                        <Button fx:id="btnMisVentas" layoutX="10.0" layoutY="445.0" mnemonicParsing="false" onAction="#ventanaMisVentas" prefHeight="48.0" prefWidth="255.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="MIS VENTAS" textFill="#c3c0c0">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -86,7 +86,7 @@
                               <TableColumn prefWidth="108.0" text="Pujantes" />
                            </columns>
                         </TableView>
-                        <Button fx:id="btnEliminar" layoutX="526.0" layoutY="579.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #5e4f1c;" stylesheets="@../styles/StyleBoton.css" text="Eliminar" textFill="#36310c">
+                        <Button fx:id="btnEliminar" layoutX="526.0" layoutY="579.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="72.0" style="-fx-background-color: #5e4f1c;" stylesheets="@../styles/StyleBoton.css" text="Eliminar" textFill="#e4d992">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>

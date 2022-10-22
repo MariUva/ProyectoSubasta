@@ -22,46 +22,30 @@ public class Aplicacion extends Application {
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 
-		try {
-			// BorderPane root = new BorderPane();
-			Parent root = FXMLLoader
-					.load(getClass().getResource("/co/uniquindio/programacion3/subasta/view/Inicio.fxml"));
-
-			Scene scene = new Scene(root);
-			// scene.getStylesheets().add(getClass().getResource("StyleTabla.css").toExternalForm());
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		ventanaPrincipal();
 	}
 
-//	 public void ventanaPrincipal() {
-//
-//	 try {
-//
-//	 FXMLLoader loader = new FXMLLoader();
-//	 loader.setLocation(Aplicacion.class
-//	 .getResource("/co/uniquindio/programacion3/subasta/view/Inicio.fxml"));
-//
-//	 AnchorPane anchorPane = (AnchorPane) loader.load();
-//	 InicioController controlador = loader.getController();
-//	 controlador.setAplicacion(this);
-//
-//	 Scene scene = new Scene(anchorPane);
-//	 primaryStage.setScene(scene);
-//	 primaryStage.show();
-//	 primaryStage.getIcons().add(new
-//	 Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-//
-//
-//	 } catch (Exception e) {
-//	 e.printStackTrace();
-//
-//	 }
-//	 }
+	public void ventanaPrincipal() {
+
+		try {
+
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Inicio.fxml"));
+
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+			InicioController controlador = loader.getController();
+			controlador.setAplicacion(this);
+
+			Scene scene = new Scene(anchorPane);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+	}
 
 	public void ventanaPrincipalComprador() {
 
@@ -88,22 +72,25 @@ public class Aplicacion extends Application {
 
 	public void ventanaPrincipalAnunciante() {
 
-			try {
-			// BorderPane root = new BorderPane();
-			Parent root;
-				root = FXMLLoader
-						.load(getClass().getResource("/co/uniquindio/programacion3/subasta/view/PrincipalAnunciante.fxml"));
-			Scene scene = new Scene(root);
+		try {
 
-			// scene.getStylesheets().add(getClass().getResource("StyleTabla.css").toExternalForm());
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(
+					Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/PrincipalAnunciante.fxml"));
+
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+			PrincipalAnuncianteController controlador = loader.getController();
+			controlador.setAplicacion(this);
+
+			Scene scene = new Scene(anchorPane);
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
 
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
 	}
 
 	public static void main(String[] args) {
