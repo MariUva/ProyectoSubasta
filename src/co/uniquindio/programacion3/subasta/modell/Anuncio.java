@@ -1,5 +1,7 @@
 package co.uniquindio.programacion3.subasta.modell;
 
+import java.util.ArrayList;
+
 public class Anuncio {
 
 	// Declaracion de atributos
@@ -11,7 +13,7 @@ public class Anuncio {
 	double valorInicial;
 	double valorSuperior;
 	TipoProducto tipoProducto;
-	Pujas listaPujas;
+	ArrayList<Pujas> listaPujas;
 
 	// Metodos getters and setters
 	public String getNombreProdcuto() {
@@ -78,11 +80,11 @@ public class Anuncio {
 		this.tipoProducto = tipoProducto;
 	}
 
-	public Pujas getListaPujas() {
+	public ArrayList<Pujas> getListaPujas() {
 		return listaPujas;
 	}
 
-	public void setListaPujas(Pujas listaPujas) {
+	public void setListaPujas(ArrayList<Pujas> listaPujas) {
 		this.listaPujas = listaPujas;
 	}
 
@@ -94,7 +96,7 @@ public class Anuncio {
 	// Metodo constructor
 	public Anuncio(String nombreProdcuto, String descripcion, String nombreAnunciante, String fechaPpublicacion,
 			String fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
-			Pujas listaPujas) {
+			ArrayList<Pujas> listaPujas) {
 		super();
 		this.nombreProdcuto = nombreProdcuto;
 		this.descripcion = descripcion;
@@ -106,7 +108,7 @@ public class Anuncio {
 		this.tipoProducto = tipoProducto;
 		this.listaPujas = listaPujas;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -125,6 +127,7 @@ public class Anuncio {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {

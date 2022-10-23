@@ -6,7 +6,6 @@ import java.beans.XMLEncoder;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -120,13 +119,13 @@ public class ArchivoUtil {
 
 		String diaN = "";
 		String mesN = "";
-		String añoN = "";
+		String aﾃｱoN = "";
 
 		Calendar cal1 = Calendar.getInstance();
 
 		int dia = cal1.get(Calendar.DATE);
 		int mes = cal1.get(Calendar.MONTH) + 1;
-		int año = cal1.get(Calendar.YEAR);
+		int aﾃｱo = cal1.get(Calendar.YEAR);
 		int hora = cal1.get(Calendar.HOUR);
 		int minuto = cal1.get(Calendar.MINUTE);
 
@@ -141,13 +140,13 @@ public class ArchivoUtil {
 			mesN += "" + mes;
 		}
 
-		// fecha_Actual+= a�o+"-"+mesN+"-"+ diaN;
-		// fechaSistema = a�o+"-"+mesN+"-"+diaN+"-"+hora+"-"+minuto;
-		fechaSistema = año + "-" + mesN + "-" + diaN;
+		// fecha_Actual+= a�ｿｽo+"-"+mesN+"-"+ diaN;
+		// fechaSistema = a�ｿｽo+"-"+mesN+"-"+diaN+"-"+hora+"-"+minuto;
+		fechaSistema = aﾃｱo + "-" + mesN + "-" + diaN;
 		// horaFechaSistema = hora+"-"+minuto;
 	}
 
-	// ------------------------------------SERIALIZACI�N y XML
+	// ------------------------------------SERIALIZACI�ｿｽN y XML
 	/**
 	 * Escribe en el fichero que se le pasa el objeto que se le envia
 	 *

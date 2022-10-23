@@ -1,6 +1,6 @@
 package co.uniquindio.programacion3.subasta.modell;
 
-public class Compradores {
+public class Compradores extends Persona{
 
 	// Declaracion de atributos
 	int numeroOfertas;
