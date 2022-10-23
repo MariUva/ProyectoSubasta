@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import co.uniquindio.programacion3.subasta.modell.Anunciante;
 import co.uniquindio.programacion3.subasta.modell.Anuncio;
 import co.uniquindio.programacion3.subasta.modell.Compradores;
-import co.uniquindio.programacion3.subasta.modell.Pujas;
+import co.uniquindio.programacion3.subasta.modell.Puja;
 
 public interface ISubastaService {
 
@@ -15,9 +15,9 @@ public interface ISubastaService {
 	ArrayList<Anunciante> obteneAnunciantes();
 
 
-	public boolean actualizarComprador(String nombre, String documento,int edad, int numOfertas, ArrayList<Pujas> listaPujas);
+	public boolean actualizarComprador(String nombre, String documento,int edad, int numOfertas, ArrayList<Puja> listaPujas);
 	public Boolean eliminarComprador(String documento);
-	Anunciante crearCcomprador(String nombre, String documento, int edad, int numOfertas, ArrayList<Pujas> listaPujas);
+	Anunciante crearCcomprador(String nombre, String documento, int edad, int numOfertas, ArrayList<Puja> listaPujas);
 	Anunciante obtenerComprador(String documento);
 	ArrayList<Compradores> obtenerCompradores();
 }

@@ -11,35 +11,34 @@ public class InicioController {
 
 	private Aplicacion aplicacion;
 
-    @FXML
-    private ResourceBundle resources;
+	@FXML
+	private ResourceBundle resources;
 
-    @FXML
-    private URL location;
+	@FXML
+	private URL location;
 
-    @FXML
-    private Button btnAnunciante;
+	@FXML
+	private Button btnAnunciante;
 
-    @FXML
-    private Button btnComprador;
+	@FXML
+	private Button btnComprador;
 
-    @FXML
-    void abrirPrincipalAnunciante(ActionEvent event) {
-    	aplicacion.ventanaPrincipalAnunciante();
-    }
+	@FXML
+	void abrirPrincipalAnunciante(ActionEvent event) {
+		aplicacion.ventanaPrincipalAnunciante();
+	}
 
-    @FXML
-    void abrirPrincipalComprador(ActionEvent event) {
-    	aplicacion.ventanaPrincipalComprador();
-    }
+	@FXML
+	void abrirPrincipalComprador(ActionEvent event) {
+		aplicacion.ventanaPrincipalComprador();
+	}
 
-    @FXML
-    void initialize() {
+	@FXML
+	void initialize() {
 
-    }
+	}
 
 	public void setAplicacion(Aplicacion aplicacion) {
 		this.aplicacion = aplicacion;
 	}
 }
-

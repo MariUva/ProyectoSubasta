@@ -4,7 +4,10 @@ public class Persona {
 
 	String documento;
 	String nombre;
+	String clave;
 	int edad;
+
+
 
 	// Metodos getters and setters
 	public String getDocumento() {
@@ -23,6 +26,14 @@ public class Persona {
 		this.nombre = nombre;
 	}
 
+	public String getClave() {
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+
 	public int getEdad() {
 		return edad;
 	}
@@ -37,10 +48,11 @@ public class Persona {
 	}
 
 	// Metodo constructor
-	public Persona(String documento, String nombre, int edad) {
+	public Persona(String documento, String nombre, String clave, int edad) {
 		super();
 		this.documento = documento;
 		this.nombre = nombre;
+		this.clave = clave;
 		this.edad = edad;
 	}
 
@@ -48,6 +60,7 @@ public class Persona {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((clave == null) ? 0 : clave.hashCode());
 		result = prime * result + ((documento == null) ? 0 : documento.hashCode());
 		result = prime * result + edad;
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
@@ -63,6 +76,11 @@ public class Persona {
 		if (getClass() != obj.getClass())
 			return false;
 		Persona other = (Persona) obj;
+		if (clave == null) {
+			if (other.clave != null)
+				return false;
+		} else if (!clave.equals(other.clave))
+			return false;
 		if (documento == null) {
 			if (other.documento != null)
 				return false;
@@ -77,11 +95,11 @@ public class Persona {
 			return false;
 		return true;
 	}
-	
-	//Metodo toString
 
+	// Metodo toString
 	@Override
 	public String toString() {
-		return "Persona [documento=" + documento + ", nombre=" + nombre + ", edad=" + edad + "]";
+		return documento + "@@" + nombre + "@@" + edad + "@@" + clave;
 	}
+
 }

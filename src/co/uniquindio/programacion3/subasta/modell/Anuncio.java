@@ -6,14 +6,16 @@ public class Anuncio {
 	String nombreProdcuto;
 	String descripcion;
 	String nombreAnunciante;
-	String fechaPpublicacion;
+	String fechaPublicacion;
 	String fechaFinalizacion;
 	double valorInicial;
 	double valorSuperior;
 	TipoProducto tipoProducto;
-	Pujas listaPujas;
+	Puja listaPujas;
+	String codigo;
 
 	// Metodos getters and setters
+
 	public String getNombreProdcuto() {
 		return nombreProdcuto;
 	}
@@ -38,12 +40,12 @@ public class Anuncio {
 		this.nombreAnunciante = nombreAnunciante;
 	}
 
-	public String getFechaPpublicacion() {
-		return fechaPpublicacion;
+	public String getFechaPublicacion() {
+		return fechaPublicacion;
 	}
 
-	public void setFechaPpublicacion(String fechaPpublicacion) {
-		this.fechaPpublicacion = fechaPpublicacion;
+	public void setFechaPublicacion(String fechaPublicacion) {
+		this.fechaPublicacion = fechaPublicacion;
 	}
 
 	public String getFechaFinalizacion() {
@@ -78,12 +80,20 @@ public class Anuncio {
 		this.tipoProducto = tipoProducto;
 	}
 
-	public Pujas getListaPujas() {
+	public Puja getListaPujas() {
 		return listaPujas;
 	}
 
-	public void setListaPujas(Pujas listaPujas) {
+	public void setListaPujas(Puja listaPujas) {
 		this.listaPujas = listaPujas;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 
 	// Metodo constructor vacio
@@ -92,28 +102,30 @@ public class Anuncio {
 	}
 
 	// Metodo constructor
-	public Anuncio(String nombreProdcuto, String descripcion, String nombreAnunciante, String fechaPpublicacion,
+	public Anuncio(String nombreProdcuto, String descripcion, String nombreAnunciante, String fechaPublicacion,
 			String fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
-			Pujas listaPujas) {
+			Puja listaPujas, String codigo) {
 		super();
 		this.nombreProdcuto = nombreProdcuto;
 		this.descripcion = descripcion;
 		this.nombreAnunciante = nombreAnunciante;
-		this.fechaPpublicacion = fechaPpublicacion;
+		this.fechaPublicacion = fechaPublicacion;
 		this.fechaFinalizacion = fechaFinalizacion;
 		this.valorInicial = valorInicial;
 		this.valorSuperior = valorSuperior;
 		this.tipoProducto = tipoProducto;
 		this.listaPujas = listaPujas;
+		this.codigo = codigo;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
 		result = prime * result + ((descripcion == null) ? 0 : descripcion.hashCode());
 		result = prime * result + ((fechaFinalizacion == null) ? 0 : fechaFinalizacion.hashCode());
-		result = prime * result + ((fechaPpublicacion == null) ? 0 : fechaPpublicacion.hashCode());
+		result = prime * result + ((fechaPublicacion == null) ? 0 : fechaPublicacion.hashCode());
 		result = prime * result + ((listaPujas == null) ? 0 : listaPujas.hashCode());
 		result = prime * result + ((nombreAnunciante == null) ? 0 : nombreAnunciante.hashCode());
 		result = prime * result + ((nombreProdcuto == null) ? 0 : nombreProdcuto.hashCode());
@@ -135,6 +147,11 @@ public class Anuncio {
 		if (getClass() != obj.getClass())
 			return false;
 		Anuncio other = (Anuncio) obj;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
 		if (descripcion == null) {
 			if (other.descripcion != null)
 				return false;
@@ -145,10 +162,10 @@ public class Anuncio {
 				return false;
 		} else if (!fechaFinalizacion.equals(other.fechaFinalizacion))
 			return false;
-		if (fechaPpublicacion == null) {
-			if (other.fechaPpublicacion != null)
+		if (fechaPublicacion == null) {
+			if (other.fechaPublicacion != null)
 				return false;
-		} else if (!fechaPpublicacion.equals(other.fechaPpublicacion))
+		} else if (!fechaPublicacion.equals(other.fechaPublicacion))
 			return false;
 		if (listaPujas == null) {
 			if (other.listaPujas != null)
@@ -178,9 +195,9 @@ public class Anuncio {
 	@Override
 	public String toString() {
 		return "Anuncio [nombreProdcuto=" + nombreProdcuto + ", descripcion=" + descripcion + ", nombreAnunciante="
-				+ nombreAnunciante + ", fechaPpublicacion=" + fechaPpublicacion + ", fechaFinalizacion="
+				+ nombreAnunciante + ", fechaPublicacion=" + fechaPublicacion + ", fechaFinalizacion="
 				+ fechaFinalizacion + ", valorInicial=" + valorInicial + ", valorSuperior=" + valorSuperior
-				+ ", tipoProducto=" + tipoProducto + ", listaPujas=" + listaPujas + "]";
+				+ ", tipoProducto=" + tipoProducto + ", listaPujas=" + listaPujas + ", codigo=" + codigo + "]";
 	}
 
 }
