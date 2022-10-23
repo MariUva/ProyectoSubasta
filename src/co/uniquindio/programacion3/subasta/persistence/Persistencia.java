@@ -10,10 +10,10 @@ import co.uniquindio.programacion3.subasta.modell.Subasta;
 
 public class Persistencia {
 
-	public static final String RUTA_ARCHIVO_PERSONAS = "src/resources/archivoPersonas.txt";
-	public static final String RUTA_ARCHIVO_LOG = "src/resources/archivoLog.txt";
-	public static final String RUTA_ARCHIVO_SUBASTA_BINARIO = "src/resources/SubastaBinario.dat";
-	public static final String RUTA_ARCHIVO_SUBASTA_XML = "src/resources/SubastaXml.xml";
+	public static final String RUTA_ARCHIVO_PERSONAS = "/Subasta/Persistencia/Archivos/Personas.txt";
+	public static final String RUTA_ARCHIVO_LOG = "/Subasta/Persistencia/Log/Subasta_Log.txt";
+	public static final String RUTA_ARCHIVO_SUBASTA_BINARIO = "/Subasta/Persistencia/model.dat";
+	public static final String RUTA_ARCHIVO_SUBASTA_XML = "/Subasta/Persistencia/model.xml";
 
 	public static void cargarDatosArchivos(Subasta subasta) throws FileNotFoundException, IOException {
 
@@ -113,8 +113,7 @@ public class Persistencia {
 
 		for (int indicePersona = 0; indicePersona < personas.size(); indicePersona++) {
 			Persona personaAux = personas.get(indicePersona);
-			if (personaAux.getNombre().equalsIgnoreCase(nombre)
-					&& personaAux.getClave().equalsIgnoreCase(clave)) {
+			if (personaAux.getNombre().equalsIgnoreCase(nombre) && personaAux.getClave().equalsIgnoreCase(clave)) {
 				return true;
 			}
 		}
@@ -164,7 +163,7 @@ public class Persistencia {
 	public static void guardarRecursoSubastaBinario(Subasta subasta) {
 
 		try {
-			ArchivoUtil.salvarRecursoSerializado(RUTA_ARCHIVO_SUBASTA_BINARIO , subasta);
+			ArchivoUtil.salvarRecursoSerializado(RUTA_ARCHIVO_SUBASTA_BINARIO, subasta);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

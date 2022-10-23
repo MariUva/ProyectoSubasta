@@ -3,8 +3,11 @@ package co.uniquindio.programacion3.subasta.controller;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import co.uniquindio.programacion3.subasta.modell.Anuncio;
 import co.uniquindio.programacion3.subasta.modell.Persona;
+import co.uniquindio.programacion3.subasta.modell.Puja;
 import co.uniquindio.programacion3.subasta.modell.Subasta;
+import co.uniquindio.programacion3.subasta.modell.TipoProducto;
 import co.uniquindio.programacion3.subasta.persistence.Persistencia;
 
 public class ModelFactoryController {
@@ -113,7 +116,7 @@ public class ModelFactoryController {
 
 		subasta.getListaPersonas().add(persona);
 
-		System.out.println("Banco inicializado " + subasta);
+		System.out.println("Subasta inicializado " + subasta);
 
 	}
 
@@ -126,7 +129,7 @@ public class ModelFactoryController {
 		this.subasta = subasta;
 	}
 
-	//-----------------CREAR PERSONA------------------
+	// -----------------CREAR PERSONA------------------
 
 	public Persona crearPersona(String documento, String nombre, String clave, int edad) {
 
@@ -141,11 +144,12 @@ public class ModelFactoryController {
 
 	}
 
-	public boolean actualizarPersona(String documentoActual, String documento, String nombre, String clave, int edad) {
-	
-		return getSubasta().actualizarPersona(documento, nombre, clave, edad);
-
-	}
+	// public boolean actualizarPersona(String documentoActual, String
+	// documento, String nombre, String clave, int edad) {
+	//
+	// return getSubasta().actualizarPersona(documento, nombre, clave, edad);
+	//
+	// }
 
 	public Boolean eliminarPersona(String codigo) {
 
@@ -166,6 +170,59 @@ public class ModelFactoryController {
 
 	public ArrayList<Persona> obtenerPersona() {
 		return subasta.getListaPersonas();
+	}
+
+	// -----------------CREAR ANUNCIO------------------
+
+	public Anuncio crearAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
+			String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
+			TipoProducto tipoProducto, Puja listaPujas, String codigo) {
+
+		Anuncio anuncio = null;
+		try {
+			anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion, nombreAnunciante, fechaPublicacion,
+					fechaFinalizacion, valorInicial, valorSuperior, tipoProducto, listaPujas, codigo);
+		} catch (Exception e) {
+			e.getMessage();
+
+		}
+		return anuncio;
+
+	}
+
+	// public boolean actualizarAnuncio(String codigoActual, String
+	// nombreProdcuto, String descripcion, String nombreAnunciante,
+	// String fechaPublicacion, String fechaFinalizacion, double valorInicial,
+	// double valorSuperior,
+	// TipoProducto tipoProducto, Puja listaPujas, String codigo) {
+	//
+	// return getSubasta().actualizarAnuncio(String nombreProdcuto, String
+	// descripcion, String nombreAnunciante,
+	// String fechaPublicacion, String fechaFinalizacion, double valorInicial,
+	// double valorSuperior,
+	// TipoProducto tipoProducto, Puja listaPujas, String codigo);
+	//
+	// }
+
+	public Boolean eliminarAnuncio(String codigo) {
+
+		boolean flagPersonaExiste = false;
+
+		try {
+			flagPersonaExiste = getSubasta().eliminarAnuncio(codigo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.getMessage();
+		}
+		return flagPersonaExiste;
+	}
+
+	public Persona obtenerAnuncio(String codigo) {
+		return null;
+	}
+
+	public ArrayList<Anuncio> obtenerAnuncios() {
+		return subasta.getListaAnuncios();
 	}
 
 }
