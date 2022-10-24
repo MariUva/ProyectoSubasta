@@ -11,6 +11,24 @@ public class Subasta {
 	ArrayList<Persona> listaPersonas = new ArrayList<Persona>();
 	ArrayList<Anuncio> listaAnuncios = new ArrayList<Anuncio>();
 	ArrayList<Puja> listaPujas = new ArrayList<>();
+	ArrayList<Anunciante> ListaAnunciantes = new ArrayList<Anunciante>();
+	ArrayList<Compradores> ListaCompradores = new ArrayList<Compradores>();
+
+	public ArrayList<Anunciante> getListaAnunciantes() {
+		return ListaAnunciantes;
+	}
+
+	public void setListaAnunciantes(ArrayList<Anunciante> listaAnunciantes) {
+		ListaAnunciantes = listaAnunciantes;
+	}
+
+	public ArrayList<Compradores> getListaCompradores() {
+		return ListaCompradores;
+	}
+
+	public void setListaCompradores(ArrayList<Compradores> listaCompradores) {
+		ListaCompradores = listaCompradores;
+	}
 
 	// Metodo constructor
 	public Subasta(String nit, String nombre, ArrayList<Persona> listaPersonas, ArrayList<Anuncio> listaAnuncions,
@@ -64,7 +82,7 @@ public class Subasta {
 		return listaAnuncios;
 	}
 
-	public void setListaAnuncions(ArrayList<Anuncio> listaAnuncios) {
+	public void setListaAnuncios(ArrayList<Anuncio> listaAnuncios) {
 		this.listaAnuncios = listaAnuncios;
 	}
 
@@ -150,7 +168,7 @@ public class Subasta {
 	// -----------------------CREAR ANUNCIO----------------
 	public Anuncio agregarAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
 			String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
-			TipoProducto tipoProducto, Puja listaPujas, String codigo) {
+			TipoProducto tipoProducto, ArrayList<Puja> listaPujas, String codigo) {
 
 		if (existeAnuncio(codigo)) {
 			return null;
@@ -216,7 +234,7 @@ public class Subasta {
 
 	public void actualizarAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
 			String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
-			TipoProducto tipoProducto, Puja listaPujas, String codigo) {
+			TipoProducto tipoProducto, ArrayList<Puja> listaPujas, String codigo) {
 
 		Anuncio anuncio = obtenerAnuncio(codigo);
 

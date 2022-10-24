@@ -9,6 +9,24 @@ public class Puja {
 	ArrayList<String> listaPersonas = new ArrayList<>();
 	double inicioPuja;
 	double finPuja;
+	String idComprador;
+	double valorOfertado;
+	public String getIdComprador() {
+		return idComprador;
+	}
+
+	public void setIdComprador(String idComprador) {
+		this.idComprador = idComprador;
+	}
+
+	public Double getValorOfertado() {
+		return valorOfertado;
+	}
+
+	public void setValorOfertado(Double valorOfertad) {
+		this.valorOfertado = valorOfertad;
+	}
+
 	ArrayList<Double> listaOfertas = new ArrayList<>();
 
 	// Metodos getters and setters

@@ -102,4 +102,9 @@ public class Persona {
 		return documento + "@@" + nombre + "@@" + edad + "@@" + clave;
 	}
 
+	public void setNumeroOfertas(Integer valueOf) {
+		// TODO Auto-generated method stub
+
+	}
+
 }

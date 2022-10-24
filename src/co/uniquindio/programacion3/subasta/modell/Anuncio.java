@@ -1,5 +1,7 @@
 package co.uniquindio.programacion3.subasta.modell;
 
+import java.util.ArrayList;
+
 public class Anuncio {
 
 	// Declaracion de atributos
@@ -11,7 +13,7 @@ public class Anuncio {
 	double valorInicial;
 	double valorSuperior;
 	TipoProducto tipoProducto;
-	Puja listaPujas;
+	ArrayList<Puja> listaPujas;
 	String codigo;
 
 	// Metodos getters and setters
@@ -80,12 +82,8 @@ public class Anuncio {
 		this.tipoProducto = tipoProducto;
 	}
 
-	public Puja getListaPujas() {
-		return listaPujas;
-	}
-
-	public void setListaPujas(Puja listaPujas) {
-		this.listaPujas = listaPujas;
+	public void setListaPujas(ArrayList<Puja> listaPujas2) {
+		this.listaPujas = listaPujas2;
 	}
 
 	public String getCodigo() {
@@ -101,10 +99,15 @@ public class Anuncio {
 		super();
 	}
 
+	public ArrayList<Puja> getListaPujas() {
+		return listaPujas;
+	}
+
 	// Metodo constructor
+
 	public Anuncio(String nombreProdcuto, String descripcion, String nombreAnunciante, String fechaPublicacion,
 			String fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
-			Puja listaPujas, String codigo) {
+			ArrayList<Puja> listaPujas, String codigo) {
 		super();
 		this.nombreProdcuto = nombreProdcuto;
 		this.descripcion = descripcion;
@@ -117,6 +120,9 @@ public class Anuncio {
 		this.listaPujas = listaPujas;
 		this.codigo = codigo;
 	}
+
+
+
 
 	@Override
 	public int hashCode() {

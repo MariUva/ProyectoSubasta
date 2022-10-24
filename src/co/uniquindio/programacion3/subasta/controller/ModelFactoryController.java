@@ -12,17 +12,17 @@ import co.uniquindio.programacion3.subasta.persistence.Persistencia;
 
 public class ModelFactoryController {
 
-	Subasta subasta;
+	static Subasta subasta = new Subasta();
 
 	// ---------------------Singleton--------------------------------
 	// Clase estatica oculta. Tan solo se instanciara el singleton una vez
 	private static class SingletonHolder {
-		// El constructor de Singleton puede ser llamado desde aquí al ser
+		// El constructor de Singleton puede ser llamado desde aquï¿½ al ser
 		// protected
 		private final static ModelFactoryController eINSTANCE = new ModelFactoryController();
 	}
 
-	// Método para obtener la instancia de nuestra clase
+	// Mï¿½todo para obtener la instancia de nuestra clase
 	public static ModelFactoryController getInstance() {
 		return SingletonHolder.eINSTANCE;
 	}
@@ -37,7 +37,7 @@ public class ModelFactoryController {
 
 		// 3. Guardar y Cargar el recurso serializable binario
 		// guardarResourceBinario();
-		// cargarResourceBinario();
+		cargarResourceBinario();
 
 		// 4. Guardar y Cargar el recurso serializable XML
 		// guardarResourceXML();
@@ -51,12 +51,12 @@ public class ModelFactoryController {
 			guardarResourceXML();
 		}
 
-		// Registrar la accion de incio de sesión
-		Persistencia.guardaRegistroLog("Inicio de sesión del usuario:pedro", 1, "inicioSesion");
+		// Registrar la accion de incio de sesiï¿½n
 
+		Persistencia.guardaRegistroLog("Inicio de sesiÃ³n del usuario:pedro", 1, "inicioSesion");
 	}
 
-	private void iniciarSalvarDatosPrueba() {
+	private void iniciarSalvarDatosPrueba () {
 
 		inicializarDatos();
 
@@ -174,21 +174,33 @@ public class ModelFactoryController {
 
 	// -----------------CREAR ANUNCIO------------------
 
-	public Anuncio crearAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
-			String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
-			TipoProducto tipoProducto, Puja listaPujas, String codigo) {
 
-		Anuncio anuncio = null;
-		try {
-			anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion, nombreAnunciante, fechaPublicacion,
-					fechaFinalizacion, valorInicial, valorSuperior, tipoProducto, listaPujas, codigo);
-		} catch (Exception e) {
-			e.getMessage();
 
-		}
-		return anuncio;
 
-	}
+
+
+
+//	public Anuncio crearAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
+//			String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
+//			TipoProducto tipoProducto, Puja listaPujas, String codigo) {
+//
+//		Anuncio anuncio = null;
+//		try {
+//			anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion, nombreAnunciante, fechaPublicacion,
+//					fechaFinalizacion, valorInicial, valorSuperior, tipoProducto, listaPujas, codigo);
+//		} catch (Exception e) {
+//			e.getMessage();
+//
+//		}
+//		return anuncio;
+//
+//	}
+
+
+
+
+
+
 
 	// public boolean actualizarAnuncio(String codigoActual, String
 	// nombreProdcuto, String descripcion, String nombreAnunciante,
@@ -223,6 +235,33 @@ public class ModelFactoryController {
 
 	public ArrayList<Anuncio> obtenerAnuncios() {
 		return subasta.getListaAnuncios();
+	}
+
+
+
+
+public static void cargarDatos() {
+
+		subasta.setListaAnunciantes(Persistencia.cargarAnunciantes());
+		subasta.setListaCompradores(Persistencia.cargarCompradores());
+		subasta.setListaPujas(Persistencia.cargarPujas());
+		subasta.setListaAnuncios(Persistencia.cargarAnuncios());
+	}
+
+	public static void guardarAnunciantes(){
+		Persistencia.guardarAnunciantes(subasta.getListaAnunciantes());
+	}
+
+	public static void guardarCompradores(){
+		Persistencia.guardarCompradores(subasta.getListaCompradores());
+	}
+
+	public static void guardarPujas(){
+		Persistencia.guardarPujas(subasta.getListaPujas());
+	}
+
+	public static void guardarAnuncios(){
+		Persistencia.guardarAnuncios(subasta.getListaAnuncios());
 	}
 
 }
