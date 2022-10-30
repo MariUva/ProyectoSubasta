@@ -71,6 +71,7 @@ public class PrincipalCompradorController {
     @FXML
     void initialize() {
 
+
     }
 
 	public void setAplicacion(Aplicacion aplicacion) {

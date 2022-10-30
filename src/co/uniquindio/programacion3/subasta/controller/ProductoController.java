@@ -11,7 +11,6 @@ public class ProductoController {
 
     @FXML
     void abrirVentanaAnunciante(ActionEvent event) {
-
     	aplicacion.ventanaPrincipalAnunciante();
     }
 

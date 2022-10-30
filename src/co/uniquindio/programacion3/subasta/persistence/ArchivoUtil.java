@@ -156,7 +156,7 @@ public class ArchivoUtil {
 	 * @throws IOException
 	 */
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings ("unchecked")
 	public static Object cargarRecursoSerializado(String rutaArchivo) throws Exception {
 		Object aux = null;
 		// Empresa empresa = null;
@@ -210,5 +210,4 @@ public class ArchivoUtil {
 		codificadorXML.close();
 
 	}
-
 }

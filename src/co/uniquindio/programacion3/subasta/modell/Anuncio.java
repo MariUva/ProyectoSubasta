@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Anuncio {
 
 	// Declaracion de atributos
+
 	String nombreProdcuto;
 	String descripcion;
 	String nombreAnunciante;
@@ -95,6 +96,7 @@ public class Anuncio {
 	}
 
 	// Metodo constructor vacio
+
 	public Anuncio() {
 		super();
 	}
@@ -198,6 +200,7 @@ public class Anuncio {
 	}
 
 	// Metodo toString
+
 	@Override
 	public String toString() {
 		return "Anuncio [nombreProdcuto=" + nombreProdcuto + ", descripcion=" + descripcion + ", nombreAnunciante="

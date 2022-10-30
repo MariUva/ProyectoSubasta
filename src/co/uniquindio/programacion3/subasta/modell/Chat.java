@@ -10,6 +10,7 @@ public class Chat {
 	ArrayList<String> listaMensajes = new ArrayList<>();
 
 	// Metodos getters and setters
+
 	public String getVendedor() {
 		return vendedor;
 	}
@@ -35,11 +36,13 @@ public class Chat {
 	}
 
 	// Constructor vacio
+
 	public Chat() {
 		super();
 	}
 
 	// Metodo constructor
+
 	public Chat(String vendedor, String usuario, ArrayList<String> listaMensajes) {
 		super();
 		this.vendedor = vendedor;
@@ -48,9 +51,9 @@ public class Chat {
 	}
 
 	// Metodo toString
+
 	@Override
 	public String toString() {
 		return "Chat [vendedor=" + vendedor + ", usuario=" + usuario + ", listaMensajes=" + listaMensajes + "]";
 	}
-
 }

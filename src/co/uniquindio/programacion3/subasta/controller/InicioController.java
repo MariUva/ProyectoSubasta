@@ -24,13 +24,8 @@ public class InicioController {
 	private Button btnComprador;
 
 	@FXML
-	void abrirPrincipalAnunciante(ActionEvent event) {
-		aplicacion.ventanaPrincipalAnunciante();
-	}
-
-	@FXML
-	void abrirPrincipalComprador(ActionEvent event) {
-		aplicacion.ventanaPrincipalComprador();
+	void abrirLogin(ActionEvent event) {
+		aplicacion.ventanaLogin();
 	}
 
 	@FXML

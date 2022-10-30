@@ -11,25 +11,27 @@ public class Puja {
 	double finPuja;
 	String idComprador;
 	double valorOfertado;
-	public String getIdComprador() {
-		return idComprador;
-	}
-
-	public void setIdComprador(String idComprador) {
-		this.idComprador = idComprador;
-	}
-
-	public Double getValorOfertado() {
-		return valorOfertado;
-	}
-
-	public void setValorOfertado(Double valorOfertad) {
-		this.valorOfertado = valorOfertad;
-	}
 
 	ArrayList<Double> listaOfertas = new ArrayList<>();
 
 	// Metodos getters and setters
+
+    public String getIdComprador() {
+        return idComprador;
+    }
+
+    public void setIdComprador(String idComprador) {
+        this.idComprador = idComprador;
+    }
+
+    public Double getValorOfertado() {
+        return valorOfertado;
+    }
+
+    public void setValorOfertado(Double valorOfertad) {
+        this.valorOfertado = valorOfertad;
+    }
+
 	public String getNombreProducto() {
 		return nombreProducto;
 	}

@@ -2,8 +2,8 @@ package co.uniquindio.programacion3.subasta.modell;
 
 public class Compradores extends Persona {
 
-	public Compradores (String documento, String nombre, int edad, String clave) {
-		super(documento, nombre, clave, edad);
+	public Compradores (String documento, String nombre, int edad, String clave, String tipoDeUsuario) {
+		super(documento, nombre, clave, edad, tipoDeUsuario);
 	}
 
 	// Declaracion de atributos

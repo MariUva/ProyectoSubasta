@@ -7,7 +7,7 @@ package co.uniquindio.programacion3.subasta.modell;
 			// TODO Auto-generated constructor stub
 		}
 
-		public Anunciante(String documento, String nombre, int edad, String clave) {
-			super(documento, nombre, clave, edad);
+		public Anunciante(String documento, String nombre, int edad, String clave, String tipoDeUsuario) {
+			super(documento, nombre, clave, edad, tipoDeUsuario);
 		}
 }
