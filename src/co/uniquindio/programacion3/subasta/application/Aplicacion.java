@@ -5,6 +5,7 @@ import java.io.IOException;
 import co.uniquindio.programacion3.subasta.controller.AdminController;
 import co.uniquindio.programacion3.subasta.controller.InicioController;
 import co.uniquindio.programacion3.subasta.controller.LoginController;
+import co.uniquindio.programacion3.subasta.controller.ModelFactoryController;
 import co.uniquindio.programacion3.subasta.controller.PrincipalAnuncianteController;
 import co.uniquindio.programacion3.subasta.controller.PrincipalCompradorController;
 import co.uniquindio.programacion3.subasta.controller.ProductoController;
@@ -25,12 +26,15 @@ public class Aplicacion extends Application {
 
 	private Stage primaryStage;
 	private Subasta subasta;
+	private ModelFactoryController modelFactoryController;
 
     @Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
+		this.modelFactoryController = modelFactoryController;
 //		this.primaryStage.setTitle("Las puajs de San Victorino");
 		ventanaPrincipal();
+
 	}
 
 	public void ventanaPrincipal() {

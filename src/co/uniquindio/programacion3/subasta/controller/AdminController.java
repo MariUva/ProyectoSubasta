@@ -60,6 +60,7 @@ public class AdminController implements Initializable{
 
         getTabla().getItems().clear();
 //        getTabla().setItems(getPersonas());
+
     }
 
     @Override

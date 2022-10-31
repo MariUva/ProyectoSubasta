@@ -29,6 +29,7 @@ public class ModelFactoryController {
     }
 
     ArrayList<Anunciante> listaAnunciantes = new ArrayList<>();
+    ArrayList<Persona> listaPersonas = new ArrayList<>();
 
     public ModelFactoryController() {
 
@@ -125,15 +126,29 @@ public class ModelFactoryController {
         persona.setNombre("Ana");
 
         subasta.getListaPersonas().add(persona);
+        getListaPersonas().add(persona);
 
         System.out.println("Subasta inicializado " + subasta);
 
+        try {
+            Persistencia.guardarPersonas(subasta.getListaPersonas());
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     // --------------- GETTERS AND SETTERS---------------
 
     public static Subasta getSubasta() {
         return subasta;
+    }
+
+    public ArrayList<Persona> getListaPersonas() {
+        return listaPersonas;
+    }
+
+    public void setListaPersonas(ArrayList<Persona> listaPersonas) {
+        this.listaPersonas = listaPersonas;
     }
 
     public void setSubasta(Subasta subasta) {
