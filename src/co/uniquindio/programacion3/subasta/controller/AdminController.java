@@ -40,7 +40,7 @@ public class AdminController implements Initializable{
     private TableColumn<Persona, String> columnaUsuario;
 
     @FXML
-    private TableColumn<Persona, String> columnaContraseña;
+    private TableColumn<Persona, String> columnaContrasenia;
 
     private Subasta subasta;
 
@@ -71,7 +71,7 @@ public class AdminController implements Initializable{
 
         this.columnaTipo.setCellValueFactory(new PropertyValueFactory<>("tipoDeUsuario"));
         this.columnaUsuario.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        this.columnaContraseña.setCellValueFactory(new PropertyValueFactory<>("clave"));
+        this.columnaContrasenia.setCellValueFactory(new PropertyValueFactory<>("clave"));
 
     }
 

@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Anuncio {
 
 	// Declaracion de atributos
-
-	String nombreProdcuto;
+	String nombreProducto;
 	String descripcion;
 	String nombreAnunciante;
 	String fechaPublicacion;
@@ -19,12 +18,12 @@ public class Anuncio {
 
 	// Metodos getters and setters
 
-	public String getNombreProdcuto() {
-		return nombreProdcuto;
+	public String getNombreProducto() {
+		return nombreProducto;
 	}
 
-	public void setNombreProdcuto(String nombreProdcuto) {
-		this.nombreProdcuto = nombreProdcuto;
+	public void setNombreProducto(String nombreProducto) {
+		this.nombreProducto = nombreProducto;
 	}
 
 	public String getDescripcion() {
@@ -107,11 +106,11 @@ public class Anuncio {
 
 	// Metodo constructor
 
-	public Anuncio(String nombreProdcuto, String descripcion, String nombreAnunciante, String fechaPublicacion,
+	public Anuncio(String nombreProducto, String descripcion, String nombreAnunciante, String fechaPublicacion,
 			String fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
 			ArrayList<Puja> listaPujas, String codigo) {
 		super();
-		this.nombreProdcuto = nombreProdcuto;
+		this.nombreProducto = nombreProducto;
 		this.descripcion = descripcion;
 		this.nombreAnunciante = nombreAnunciante;
 		this.fechaPublicacion = fechaPublicacion;
@@ -136,7 +135,7 @@ public class Anuncio {
 		result = prime * result + ((fechaPublicacion == null) ? 0 : fechaPublicacion.hashCode());
 		result = prime * result + ((listaPujas == null) ? 0 : listaPujas.hashCode());
 		result = prime * result + ((nombreAnunciante == null) ? 0 : nombreAnunciante.hashCode());
-		result = prime * result + ((nombreProdcuto == null) ? 0 : nombreProdcuto.hashCode());
+		result = prime * result + ((nombreProducto == null) ? 0 : nombreProducto.hashCode());
 		result = prime * result + ((tipoProducto == null) ? 0 : tipoProducto.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(valorInicial);
@@ -185,10 +184,10 @@ public class Anuncio {
 				return false;
 		} else if (!nombreAnunciante.equals(other.nombreAnunciante))
 			return false;
-		if (nombreProdcuto == null) {
-			if (other.nombreProdcuto != null)
+		if (nombreProducto == null) {
+			if (other.nombreProducto != null)
 				return false;
-		} else if (!nombreProdcuto.equals(other.nombreProdcuto))
+		} else if (!nombreProducto.equals(other.nombreProducto))
 			return false;
 		if (tipoProducto != other.tipoProducto)
 			return false;
@@ -203,7 +202,7 @@ public class Anuncio {
 
 	@Override
 	public String toString() {
-		return "Anuncio [nombreProdcuto=" + nombreProdcuto + ", descripcion=" + descripcion + ", nombreAnunciante="
+		return "Anuncio [nombreProducto=" + nombreProducto + ", descripcion=" + descripcion + ", nombreAnunciante="
 				+ nombreAnunciante + ", fechaPublicacion=" + fechaPublicacion + ", fechaFinalizacion="
 				+ fechaFinalizacion + ", valorInicial=" + valorInicial + ", valorSuperior=" + valorSuperior
 				+ ", tipoProducto=" + tipoProducto + ", listaPujas=" + listaPujas + ", codigo=" + codigo + "]";

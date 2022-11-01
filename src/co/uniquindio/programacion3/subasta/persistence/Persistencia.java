@@ -118,7 +118,7 @@ public class Persistencia {
             String tipoProducto = obtenerStringTipoProducto(anuncio.getTipoProducto());
             String pujas = obtenerStringPujas(anuncio.getListaPujas());
 
-            contenido += anuncio.getNombreProdcuto() + "@@" + anuncio.getDescripcion() + "@@"
+            contenido += anuncio.getNombreProducto() + "@@" + anuncio.getDescripcion() + "@@"
                     + anuncio.getNombreAnunciante() + "@@" + anuncio.getFechaPublicacion() + "@@"
                     + anuncio.getFechaFinalizacion() + "@@" + anuncio.getValorInicial() + "@@"
                     + anuncio.getValorSuperior() + "@@" + tipoProducto + "@@" + anuncio.getCodigo() + "@@" + pujas + " "
@@ -267,7 +267,7 @@ public class Persistencia {
         for (int i = 0; i < contenido.size(); i++) {
             linea = contenido.get(i);
             Anuncio anuncio = new Anuncio();
-            anuncio.setNombreProdcuto(linea.split("@@")[0]);
+            anuncio.setNombreProducto(linea.split("@@")[0]);
             anuncio.setDescripcion(linea.split("@@")[1]);
             anuncio.setNombreAnunciante(linea.split("@@")[2]);
             anuncio.setFechaPublicacion(linea.split("@@")[3]);

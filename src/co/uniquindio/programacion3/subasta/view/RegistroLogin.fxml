@@ -34,7 +34,7 @@
          </image>
       </ImageView>
       <TextField fx:id="txtNombre" layoutX="152.0" layoutY="416.0" style="-fx-background-color: #4e4f52;" stylesheets="@../styles/StyleField2.css" />
-      <PasswordField fx:id="txtContraseña" layoutX="152.0" layoutY="456.0" style="-fx-background-color: #4e4f52;" stylesheets="@../styles/StyleField2.css" />
+      <PasswordField fx:id="txtContrasenia" layoutX="152.0" layoutY="456.0" style="-fx-background-color: #4e4f52;" stylesheets="@../styles/StyleField2.css" />
       <ComboBox fx:id="btnTipoUsuario" layoutX="152.0" layoutY="367.0" onAction="#seleccionarTipoUsuario" prefHeight="31.0" prefWidth="187.0" promptText="Tipo de usuario" stylesheets="@../styles/StyleComboBox.css" />
       <Button fx:id="btnAtras" layoutX="-26.0" layoutY="567.0" mnemonicParsing="false" onAction="#abrirVentanaLogin" prefHeight="52.0" prefWidth="64.0" stylesheets="@../styles/StyleBoton2.css">
          <graphic>

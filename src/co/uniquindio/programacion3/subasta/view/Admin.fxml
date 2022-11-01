@@ -51,8 +51,8 @@
         <columns>
           <TableColumn fx:id="columnaTipo" prefWidth="119.0" text="Tipo" />
           <TableColumn fx:id="columnaUsuario" prefWidth="120.0" text="Usuario" />
-            <TableColumn fx:id="columnaContraseña" prefWidth="135.0" text="Contraseña" />
-            <TableColumn prefWidth="121.0" text="Contraseñas" />
+            <TableColumn fx:id="columnaContrasenia" prefWidth="135.0" text="Contraseña" />
+            <TableColumn prefWidth="121.0" text="Contrasenias" />
         </columns>
       </TableView>
    </children>

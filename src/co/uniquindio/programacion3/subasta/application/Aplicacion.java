@@ -24,212 +24,228 @@ import javafx.scene.layout.BorderPane;
 
 public class Aplicacion extends Application {
 
-	private Stage primaryStage;
-	private Subasta subasta;
-	private ModelFactoryController modelFactoryController;
+    private Stage primaryStage;
+    private Subasta subasta;
+    private ModelFactoryController modelFactoryController;
 
     @Override
-	public void start(Stage primaryStage) {
-		this.primaryStage = primaryStage;
-		this.modelFactoryController = modelFactoryController;
+    public void start(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+        this.modelFactoryController = modelFactoryController;
 //		this.primaryStage.setTitle("Las puajs de San Victorino");
-		ventanaPrincipal();
+        ventanaPrincipal();
 
-	}
+    }
 
-	public void ventanaPrincipal() {
+    public void ventanaPrincipal() {
 
-		try {
+        try {
 
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Inicio.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Inicio.fxml"));
 
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-			InicioController controlador = loader.getController();
-			controlador.setAplicacion(this);
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            InicioController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-			Scene scene = new Scene(anchorPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-			primaryStage.centerOnScreen();
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
 //			primaryStage.setResizable(false);
 
-		} catch (Exception e) {
-			e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
 
-		}
-	}
+        }
+    }
 
-	public void ventanaPrincipalComprador() {
+    public void ventanaPrincipalComprador() {
 
-		try {
+        try {
 
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(
-					Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/PrincipalComprador.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(
+                    Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/PrincipalComprador.fxml"));
 
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-			PrincipalCompradorController controlador = loader.getController();
-			controlador.setAplicacion(this);
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            PrincipalCompradorController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-			Scene scene = new Scene(anchorPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-			primaryStage.centerOnScreen();
-			primaryStage.setResizable(false);
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
+            primaryStage.setResizable(false);
 
+        } catch (Exception e) {
+            e.printStackTrace();
 
-		} catch (Exception e) {
-			e.printStackTrace();
+        }
+    }
 
-		}
-	}
+    public void ventanaPrincipalAnunciante() {
 
-	public void ventanaPrincipalAnunciante() {
+        try {
 
-		try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(
+                    Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/PrincipalAnunciante.fxml"));
 
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(
-					Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/PrincipalAnunciante.fxml"));
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            PrincipalAnuncianteController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-			PrincipalAnuncianteController controlador = loader.getController();
-			controlador.setAplicacion(this);
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
+            primaryStage.setResizable(false);
 
-			Scene scene = new Scene(anchorPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-			primaryStage.centerOnScreen();
-			primaryStage.setResizable(false);
+        } catch (Exception e) {
+            e.printStackTrace();
 
-		} catch (Exception e) {
-			e.printStackTrace();
+        }
+    }
 
-		}
-	}
+    public void ventanaProducto() {
 
-	public void ventanaProducto() {
+        try {
 
-		try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Producto.fxml"));
 
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Producto.fxml"));
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            ProductoController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-			ProductoController controlador = loader.getController();
-			controlador.setAplicacion(this);
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
+            primaryStage.setResizable(false);
 
-			Scene scene = new Scene(anchorPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-			primaryStage.centerOnScreen();
-			primaryStage.setResizable(false);
+        } catch (Exception e) {
+            e.printStackTrace();
 
-		} catch (Exception e) {
-			e.printStackTrace();
+        }
+    }
 
-		}
-	}
+    public void ventanaLogin() {
 
-	public void ventanaLogin() {
+        try {
 
-		try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Login.fxml"));
 
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Login.fxml"));
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            LoginController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-			LoginController controlador = loader.getController();
-			controlador.setAplicacion(this);
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
+            primaryStage.setResizable(false);
 
-			Scene scene = new Scene(anchorPane);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-			primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-			primaryStage.centerOnScreen();
-			primaryStage.setResizable(false);
+        } catch (Exception e) {
+            e.printStackTrace();
 
-		} catch (Exception e) {
-			e.printStackTrace();
+        }
+    }
 
-		}
-	}
+    public void ventanaRegistroLogin() {
 
-	   public void ventanaRegistroLogin() {
+        try {
 
-	        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(
+                    Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/RegistroLogin.fxml"));
 
-	            FXMLLoader loader = new FXMLLoader();
-	            loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/RegistroLogin.fxml"));
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            RegistroLoginController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-	            AnchorPane anchorPane = (AnchorPane) loader.load();
-	            RegistroLoginController controlador = loader.getController();
-	            controlador.setAplicacion(this);
-
-	            Scene scene = new Scene(anchorPane);
-	            primaryStage.setScene(scene);
-	            primaryStage.show();
-	            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-	            primaryStage.centerOnScreen();
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
 //	            primaryStage.setResizable(false);
 
-	        } catch (Exception e) {
-	            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
 
-	        }
-	    }
+        }
+    }
 
-       public void ventanaAdmin() {
+    public void ventanaAdmin() {
 
-           try {
+        try {
 
-               FXMLLoader loader = new FXMLLoader();
-               loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Admin.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Aplicacion.class.getResource("/co/uniquindio/programacion3/subasta/view/Admin.fxml"));
 
-               AnchorPane anchorPane = (AnchorPane) loader.load();
-               AdminController controlador = loader.getController();
-               controlador.setAplicacion(this);
+            AnchorPane anchorPane = (AnchorPane) loader.load();
+            AdminController controlador = loader.getController();
+            controlador.setAplicacion(this);
 
-               Scene scene = new Scene(anchorPane);
-               primaryStage.setScene(scene);
-               primaryStage.show();
-               primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-               primaryStage.centerOnScreen();
+            Scene scene = new Scene(anchorPane);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            primaryStage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+            primaryStage.centerOnScreen();
 //             primaryStage.setResizable(false);
 
-           } catch (Exception e) {
-               e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
 
-           }
-       }
+        }
+    }
 
-	    public void mostrarMensaje(String titulo, String header, String contenido, AlertType alertType) {
+    public void mostrarMensaje(String titulo, String header, String contenido, AlertType alertType) {
 
-	        Alert alerta = new Alert(alertType);
-	        alerta.setTitle(titulo);
-	        alerta.setHeaderText(header);
-	        alerta.setContentText(contenido);
-	        Stage stage = (Stage) alerta.getDialogPane().getScene().getWindow();
-            stage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
-	        alerta.showAndWait();
+        Alert alerta = new Alert(alertType);
+        alerta.setTitle(titulo);
+        alerta.setHeaderText(header);
+        alerta.setContentText(contenido);
+        Stage stage = (Stage) alerta.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image("/co/uniquindio/programacion3/subasta/images/LOGO.png"));
+        alerta.showAndWait();
 
-	    }
+    }
 
-	    public Subasta getSubasta() {
-	        return subasta;
-	    }
+    public Subasta getSubasta() {
+        return subasta;
+    }
 
-	    public void setSubasta(Subasta subasta) {
-	        this.subasta = subasta;
-	    }
+    public void setSubasta(Subasta subasta) {
+        this.subasta = subasta;
+    }
 
-	public static void main(String[] args) {
-		launch(args);
-	}
+    public Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
+
+    public ModelFactoryController getModelFactoryController() {
+        return modelFactoryController;
+    }
+
+    public void setModelFactoryController(ModelFactoryController modelFactoryController) {
+        this.modelFactoryController = modelFactoryController;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 
 }

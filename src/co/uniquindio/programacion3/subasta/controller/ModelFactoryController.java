@@ -30,6 +30,7 @@ public class ModelFactoryController {
 
     ArrayList<Anunciante> listaAnunciantes = new ArrayList<>();
     ArrayList<Persona> listaPersonas = new ArrayList<>();
+    ArrayList<Anuncio> listaAnuncios = new ArrayList<>();
 
     public ModelFactoryController() {
 
@@ -132,7 +133,7 @@ public class ModelFactoryController {
 
         try {
             Persistencia.guardarPersonas(subasta.getListaPersonas());
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -141,6 +142,14 @@ public class ModelFactoryController {
 
     public static Subasta getSubasta() {
         return subasta;
+    }
+
+    public ArrayList<Anuncio> getListaAnuncios() {
+        return listaAnuncios;
+    }
+
+    public void setListaAnuncios(ArrayList<Anuncio> listaAnuncios) {
+        this.listaAnuncios = listaAnuncios;
     }
 
     public ArrayList<Persona> getListaPersonas() {
@@ -191,11 +200,11 @@ public class ModelFactoryController {
 
     }
 
-    public static Boolean existeUsuario (String nombre){
+    public static Boolean existeUsuario(String nombre) {
 
         try {
 
-            if (getSubasta().existeUsuario(nombre)){
+            if (getSubasta().existeUsuario(nombre)) {
                 return true;
             }
 
@@ -205,7 +214,6 @@ public class ModelFactoryController {
         }
         return false;
     }
-
 
     // public boolean actualizarPersona(String documentoActual, String
     // documento, String nombre, String clave, int edad) {
@@ -237,15 +245,14 @@ public class ModelFactoryController {
 
     // -----------------ANUNCIO------------------
 
-    public Anuncio crearAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
-            String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
-            TipoProducto tipoProducto, ArrayList<Puja> listaPujas, String codigo) {
+    public Anuncio crearAnuncio(String nombreProdcuto, String descripcion, String fechaPublicacion,
+            String fechaFinalizacion, double valorInicial,
+            TipoProducto tipoProducto, String codigo) {
 
         Anuncio anuncio = null;
         try {
-            anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion, nombreAnunciante, fechaPublicacion,
-                    fechaFinalizacion, valorInicial, valorSuperior, tipoProducto, listaPujas,
-                    codigo);
+            anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion, fechaPublicacion,
+                    fechaFinalizacion, valorInicial, tipoProducto, codigo);
         } catch (Exception e) {
             e.getMessage();
 
@@ -253,25 +260,6 @@ public class ModelFactoryController {
         return anuncio;
 
     }
-    // public Anuncio crearAnuncio(String nombreProdcuto, String descripcion,
-    // String nombreAnunciante,
-    // String fechaPublicacion, String fechaFinalizacion, double valorInicial,
-    // double valorSuperior,
-    // TipoProducto tipoProducto, Puja listaPujas, String codigo) {
-    //
-    // Anuncio anuncio = null;
-    // try {
-    // anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion,
-    // nombreAnunciante, fechaPublicacion,
-    // fechaFinalizacion, valorInicial, valorSuperior, tipoProducto, listaPujas,
-    // codigo);
-    // } catch (Exception e) {
-    // e.getMessage();
-    //
-    // }
-    // return anuncio;
-    //
-    // }
 
     // public boolean actualizarAnuncio(String codigoActual, String
     // nombreProdcuto, String descripcion, String nombreAnunciante,

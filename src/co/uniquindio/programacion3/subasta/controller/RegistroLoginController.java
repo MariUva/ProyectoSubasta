@@ -20,7 +20,7 @@ public class RegistroLoginController {
     private Persona usuarioCreado;
 
     String usuario;
-    String contraseña;
+    String contrasenia;
     String edad;
     String documento;
     String tipoDeUsuario;
@@ -32,7 +32,7 @@ public class RegistroLoginController {
     private URL location;
 
     @FXML
-    private PasswordField txtContraseña;
+    private PasswordField txtContrasenia;
 
     @FXML
     private Button btnAtras;
@@ -78,13 +78,13 @@ public class RegistroLoginController {
 
         cargarDatos();
 
-        if (datosValidos(usuario, contraseña, edad, documento, 18, tipoDeUsuario)) {
+        if (datosValidos(usuario, contrasenia, edad, documento, 18, tipoDeUsuario)) {
 
             int edadINT = Integer.parseInt(edad);
 
-            if (datosValidos(usuario, contraseña, edad, documento, edadINT, tipoDeUsuario)) {
+            if (datosValidos(usuario, contrasenia, edad, documento, edadINT, tipoDeUsuario)) {
 
-                usuarioCreado = ModelFactoryController.crearPersona(documento, usuario, contraseña, edadINT, tipoDeUsuario);
+                usuarioCreado = ModelFactoryController.crearPersona(documento, usuario, contrasenia, edadINT, tipoDeUsuario);
 
                 aplicacion.mostrarMensaje("Confirmación", "Hola, " + usuarioCreado.getNombre() + "!",
                         "El usuario se ha creado correctamente", AlertType.CONFIRMATION);
@@ -97,14 +97,14 @@ public class RegistroLoginController {
     private void cargarDatos() {
 
         usuario = txtNombre.getText();
-        contraseña = String.valueOf(txtContraseña.getText());
+        contrasenia = String.valueOf(txtContrasenia.getText());
         edad = txtEdad.getText();
         documento = txtDocumento.getText();
         tipoDeUsuario = btnTipoUsuario.getValue();
 
     }
 
-    private boolean datosValidos(String usuario, String contraseña, String edad1, String documento, int edad, String tipoUsuario) {
+    private boolean datosValidos(String usuario, String contrasenia, String edad1, String documento, int edad, String tipoUsuario) {
 
         String notificacion = "";
 
@@ -112,7 +112,7 @@ public class RegistroLoginController {
             notificacion += "Debes ingresar un nombre de usuario\n";
 
         }
-        if (contraseña == null || contraseña.equals("")) {
+        if (contrasenia == null || contrasenia.equals("")) {
             notificacion += "Debes ingresar una contraseña de usuario\n";
 
         }

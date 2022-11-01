@@ -136,7 +136,7 @@ public class Subasta {
         return false;
     }
 
-    public boolean existeUsuario (String usuario) {
+    public boolean existeUsuario(String usuario) {
         boolean existe = false;
         for (Persona persona : listaPersonas) {
             if (persona.getNombre().equals(usuario)) {
@@ -149,7 +149,6 @@ public class Subasta {
 
         return false;
     }
-
 
     public Boolean eliminarPersona(String documento) {
         Boolean flagEliminado = false;
@@ -205,9 +204,9 @@ public class Subasta {
     }
 
     // -----------------------CREAR ANUNCIO----------------
-    public Anuncio agregarAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
-            String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
-            TipoProducto tipoProducto, ArrayList<Puja> listaPujas, String codigo) {
+    public Anuncio agregarAnuncio(String nombreProducto, String descripcion,
+            String fechaPublicacion, String fechaFinalizacion, double valorInicial,
+            TipoProducto tipoProducto, String codigo) {
 
         if (existeAnuncio(codigo)) {
             return null;
@@ -218,12 +217,9 @@ public class Subasta {
             nuevoAnuncio.setDescripcion(descripcion);
             nuevoAnuncio.setFechaFinalizacion(fechaFinalizacion);
             nuevoAnuncio.setFechaPublicacion(fechaPublicacion);
-            nuevoAnuncio.setListaPujas(listaPujas);
-            nuevoAnuncio.setNombreAnunciante(nombreAnunciante);
-            nuevoAnuncio.setNombreProdcuto(nombreProdcuto);
+            nuevoAnuncio.setNombreProducto(nombreProducto);
             nuevoAnuncio.setTipoProducto(tipoProducto);
             nuevoAnuncio.setValorInicial(valorInicial);
-            nuevoAnuncio.setValorSuperior(valorSuperior);
             nuevoAnuncio.setCodigo(codigo);
 
             getListaAnuncios().add(nuevoAnuncio);
@@ -271,8 +267,8 @@ public class Subasta {
 
     }
 
-    public void actualizarAnuncio(String nombreProdcuto, String descripcion, String nombreAnunciante,
-            String fechaPublicacion, String fechaFinalizacion, double valorInicial, double valorSuperior,
+    public void actualizarAnuncio(String nombreProducto, String descripcion, String nombreAnunciante,
+            String fechaPublicacion, String fechaFinalizacion, double valorInicial,
             TipoProducto tipoProducto, ArrayList<Puja> listaPujas, String codigo) {
 
         Anuncio anuncio = obtenerAnuncio(codigo);
@@ -283,10 +279,9 @@ public class Subasta {
             anuncio.setFechaPublicacion(fechaPublicacion);
             anuncio.setListaPujas(listaPujas);
             anuncio.setNombreAnunciante(nombreAnunciante);
-            anuncio.setNombreProdcuto(nombreProdcuto);
+            anuncio.setNombreProducto(nombreProducto);
             anuncio.setTipoProducto(tipoProducto);
             anuncio.setValorInicial(valorInicial);
-            anuncio.setValorSuperior(valorSuperior);
             anuncio.setCodigo(codigo);
 
         }

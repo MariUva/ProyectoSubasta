@@ -23,11 +23,11 @@ public class LoginController {
     private Persona usuarioEncontrado;
 
     String usuario;
-    String contraseña;
+    String contrasenia;
     String tipoUsuario;
 
     @FXML
-    private PasswordField txtContraseña;
+    private PasswordField txtContrasenia;
 
     @FXML
     private Button btnAtras;
@@ -83,7 +83,7 @@ public class LoginController {
 
             if (!usuarioEncontrado.getClave().equals(null)) {
 
-                if (usuario.equals(usuarioEncontrado.getNombre()) && contraseña.equals(usuarioEncontrado.getClave()) &&
+                if (usuario.equals(usuarioEncontrado.getNombre()) && contrasenia.equals(usuarioEncontrado.getClave()) &&
                         tipoUsuario.equals(usuarioEncontrado.getTipoDeUsuario())) {
                     aplicacion.mostrarMensaje(null, "Hola, " + usuario + "!", "Acceso confirmado",
                             AlertType.CONFIRMATION);
@@ -102,7 +102,7 @@ public class LoginController {
 
                 } else {
                     aplicacion.mostrarMensaje(null, "Datos incorrectos",
-                            "El usuario, la contraseña o el tipo es incorrecto",
+                            "El usuario, la contrase�a o el tipo es incorrecto",
                             AlertType.ERROR);
                 }
 
@@ -119,7 +119,7 @@ public class LoginController {
     private void cargarDatos() {
 
         usuario = txtNombre.getText();
-        contraseña = String.valueOf(txtContraseña.getText());
+        contrasenia = String.valueOf(txtContrasenia.getText());
         tipoUsuario = btnTipoUsuario.getValue();
 
     }
@@ -142,14 +142,14 @@ public class LoginController {
         String notificacion = "";
 
         if (usuario == null || usuario.equals("") ||
-                contraseña == null || contraseña.equals("") ||
+                contrasenia == null || contrasenia.equals("") ||
                 tipoUsuario == null || tipoUsuario.equals("")) {
 
             if (usuario == null || usuario.equals("")) {
                 notificacion += "Debe ingresar un usuario\n";
             }
 
-            if (contraseña == null || contraseña.equals("")) {
+            if (contrasenia == null || contrasenia.equals("")) {
                 notificacion += "Debe ingresar una contraseña\n";
             }
 
@@ -173,7 +173,7 @@ public class LoginController {
 
     private void limpiar() {
         txtNombre.setText(null);
-        txtContraseña.setText(null);
+        txtContrasenia.setText(null);
     }
 
 }
