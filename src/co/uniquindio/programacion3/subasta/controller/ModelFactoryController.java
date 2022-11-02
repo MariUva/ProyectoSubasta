@@ -1,19 +1,18 @@
 package co.uniquindio.programacion3.subasta.controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
-import co.uniquindio.programacion3.subasta.modell.Anunciante;
 import co.uniquindio.programacion3.subasta.modell.Anuncio;
 import co.uniquindio.programacion3.subasta.modell.Persona;
-import co.uniquindio.programacion3.subasta.modell.Puja;
 import co.uniquindio.programacion3.subasta.modell.Subasta;
 import co.uniquindio.programacion3.subasta.modell.TipoProducto;
 import co.uniquindio.programacion3.subasta.persistence.Persistencia;
 
 public class ModelFactoryController {
 
-    static Subasta subasta = new Subasta();
+    private static Subasta subasta = new Subasta();
 
     // ---------------------Singleton--------------------------------
     // Clase estatica oculta. Tan solo se instanciara el singleton una vez
@@ -28,9 +27,6 @@ public class ModelFactoryController {
         return SingletonHolder.eINSTANCE;
     }
 
-    ArrayList<Anunciante> listaAnunciantes = new ArrayList<>();
-    ArrayList<Persona> listaPersonas = new ArrayList<>();
-    ArrayList<Anuncio> listaAnuncios = new ArrayList<>();
 
     public ModelFactoryController() {
 
@@ -127,9 +123,6 @@ public class ModelFactoryController {
         persona.setNombre("Ana");
 
         subasta.getListaPersonas().add(persona);
-        getListaPersonas().add(persona);
-
-        System.out.println("Subasta inicializado " + subasta);
 
         try {
             Persistencia.guardarPersonas(subasta.getListaPersonas());
@@ -144,33 +137,33 @@ public class ModelFactoryController {
         return subasta;
     }
 
-    public ArrayList<Anuncio> getListaAnuncios() {
-        return listaAnuncios;
+    public static ArrayList<Anuncio> getListaAnuncios() {
+        return subasta.getListaAnuncios();
     }
 
-    public void setListaAnuncios(ArrayList<Anuncio> listaAnuncios) {
-        this.listaAnuncios = listaAnuncios;
-    }
-
-    public ArrayList<Persona> getListaPersonas() {
-        return listaPersonas;
-    }
-
-    public void setListaPersonas(ArrayList<Persona> listaPersonas) {
-        this.listaPersonas = listaPersonas;
-    }
+//    public void setListaAnuncios(ArrayList<Anuncio> listaAnuncios) {
+//        this.listaAnuncios = listaAnuncios;
+//    }
+//
+//    public ArrayList<Persona> getListaPersonas() {
+//        return listaPersonas;
+//    }
+//
+//    public void setListaPersonas(ArrayList<Persona> listaPersonas) {
+//        this.listaPersonas = listaPersonas;
+//    }
 
     public void setSubasta(Subasta subasta) {
         this.subasta = subasta;
     }
 
-    public ArrayList<Anunciante> getListaAnunciantes() {
-        return listaAnunciantes;
-    }
-
-    public void setListaAnunciantes(ArrayList<Anunciante> listaAnunciantes) {
-        this.listaAnunciantes = listaAnunciantes;
-    }
+//    public ArrayList<Anunciante> getListaAnunciantes() {
+//        return listaAnunciantes;
+//    }
+//
+//    public void setListaAnunciantes(ArrayList<Anunciante> listaAnunciantes) {
+//        this.listaAnunciantes = listaAnunciantes;
+//    }
 
     // -----------------PERSONA------------------
 
@@ -245,13 +238,13 @@ public class ModelFactoryController {
 
     // -----------------ANUNCIO------------------
 
-    public Anuncio crearAnuncio(String nombreProdcuto, String descripcion, String fechaPublicacion,
-            String fechaFinalizacion, double valorInicial,
-            TipoProducto tipoProducto, String codigo) {
+    public static Anuncio crearAnuncio(String nombreProducto, String descripcion, LocalDate fechaPublicacion,
+            LocalDate fechaFinalizacion, Double valorInicial,
+            TipoProducto tipoProducto, String codigo, byte[] array) {
 
         Anuncio anuncio = null;
         try {
-            anuncio = getSubasta().agregarAnuncio(nombreProdcuto, descripcion, fechaPublicacion,
+            anuncio = getSubasta().agregarAnuncio(nombreProducto, descripcion, fechaPublicacion,
                     fechaFinalizacion, valorInicial, tipoProducto, codigo);
         } catch (Exception e) {
             e.getMessage();
@@ -262,12 +255,12 @@ public class ModelFactoryController {
     }
 
     // public boolean actualizarAnuncio(String codigoActual, String
-    // nombreProdcuto, String descripcion, String nombreAnunciante,
+    // nombreProducto, String descripcion, String nombreAnunciante,
     // String fechaPublicacion, String fechaFinalizacion, double valorInicial,
     // double valorSuperior,
     // TipoProducto tipoProducto, Puja listaPujas, String codigo) {
     //
-    // return getSubasta().actualizarAnuncio(String nombreProdcuto, String
+    // return getSubasta().actualizarAnuncio(String nombreProducto, String
     // descripcion, String nombreAnunciante,
     // String fechaPublicacion, String fechaFinalizacion, double valorInicial,
     // double valorSuperior,
@@ -275,7 +268,7 @@ public class ModelFactoryController {
     //
     // }
 
-    public Boolean eliminarAnuncio(String codigo) {
+    public static Boolean eliminarAnuncio(String codigo) {
 
         boolean flagPersonaExiste = false;
 

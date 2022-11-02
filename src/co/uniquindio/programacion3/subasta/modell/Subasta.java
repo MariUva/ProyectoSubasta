@@ -1,5 +1,6 @@
 package co.uniquindio.programacion3.subasta.modell;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javafx.scene.control.Alert;
@@ -205,7 +206,7 @@ public class Subasta {
 
     // -----------------------CREAR ANUNCIO----------------
     public Anuncio agregarAnuncio(String nombreProducto, String descripcion,
-            String fechaPublicacion, String fechaFinalizacion, double valorInicial,
+            LocalDate fechaPublicacion, LocalDate fechaFinalizacion, double valorInicial,
             TipoProducto tipoProducto, String codigo) {
 
         if (existeAnuncio(codigo)) {
@@ -268,7 +269,7 @@ public class Subasta {
     }
 
     public void actualizarAnuncio(String nombreProducto, String descripcion, String nombreAnunciante,
-            String fechaPublicacion, String fechaFinalizacion, double valorInicial,
+            LocalDate fechaPublicacion, LocalDate fechaFinalizacion, double valorInicial,
             TipoProducto tipoProducto, ArrayList<Puja> listaPujas, String codigo) {
 
         Anuncio anuncio = obtenerAnuncio(codigo);

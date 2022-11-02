@@ -270,8 +270,8 @@ public class Persistencia {
             anuncio.setNombreProducto(linea.split("@@")[0]);
             anuncio.setDescripcion(linea.split("@@")[1]);
             anuncio.setNombreAnunciante(linea.split("@@")[2]);
-            anuncio.setFechaPublicacion(linea.split("@@")[3]);
-            anuncio.setFechaFinalizacion(linea.split("@@")[4]);
+//            anuncio.setFechaPublicacion(linea.split("@@")[3]);
+//            anuncio.setFechaFinalizacion(linea.split("@@")[4]);
             anuncio.setValorInicial(Double.valueOf((linea.split("@@")[5])));
             anuncio.setValorSuperior(Double.valueOf((linea.split("@@")[6])));
             TipoProducto tipoProducto = obtenerTipoProducto(linea.split("@@")[7]);

@@ -1,24 +1,80 @@
 package co.uniquindio.programacion3.subasta.modell;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Anuncio {
 
 	// Declaracion de atributos
-	String nombreProducto;
-	String descripcion;
-	String nombreAnunciante;
-	String fechaPublicacion;
-	String fechaFinalizacion;
-	double valorInicial;
-	double valorSuperior;
-	TipoProducto tipoProducto;
-	ArrayList<Puja> listaPujas;
-	String codigo;
+	private String nombreProducto;
+	private String descripcion;
+	private String nombreAnunciante;
+	private LocalDate fechaPublicacion;
+	private LocalDate fechaFinalizacion;
+	private double valorInicial;
+	private double valorSuperior;
+	private TipoProducto tipoProducto;
+	private ArrayList<Puja> listaPujas;
+	private String codigo;
+	private byte[] imageByte;
+
+	// Metodo constructor
+	 public Anuncio(String nombreProducto, String descripcion, String nombreAnunciante, LocalDate fechaPublicacion,
+	            LocalDate fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
+	            ArrayList<Puja> listaPujas, String codigo, byte[] imageByte) {
+	        super();
+	        this.nombreProducto = nombreProducto;
+	        this.descripcion = descripcion;
+	        this.nombreAnunciante = nombreAnunciante;
+	        this.fechaPublicacion = fechaPublicacion;
+	        this.fechaFinalizacion = fechaFinalizacion;
+	        this.valorInicial = valorInicial;
+	        this.valorSuperior = valorSuperior;
+	        this.tipoProducto = tipoProducto;
+	        this.listaPujas = listaPujas;
+	        this.codigo = codigo;
+	        this.imageByte = imageByte;
+	    }
+
+
 
 	// Metodos getters and setters
 
-	public String getNombreProducto() {
+	public byte[] getImageByte() {
+        return imageByte;
+    }
+
+
+
+    public void setImageByte(byte[] imageByte) {
+        this.imageByte = imageByte;
+    }
+
+
+
+    public LocalDate getFechaPublicacion() {
+        return fechaPublicacion;
+    }
+
+
+
+
+    public void setFechaPublicacion(LocalDate fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
+
+
+    public LocalDate getFechaFinalizacion() {
+        return fechaFinalizacion;
+    }
+
+
+    public void setFechaFinalizacion(LocalDate fechaFinalizacion) {
+        this.fechaFinalizacion = fechaFinalizacion;
+    }
+
+
+    public String getNombreProducto() {
 		return nombreProducto;
 	}
 
@@ -40,22 +96,6 @@ public class Anuncio {
 
 	public void setNombreAnunciante(String nombreAnunciante) {
 		this.nombreAnunciante = nombreAnunciante;
-	}
-
-	public String getFechaPublicacion() {
-		return fechaPublicacion;
-	}
-
-	public void setFechaPublicacion(String fechaPublicacion) {
-		this.fechaPublicacion = fechaPublicacion;
-	}
-
-	public String getFechaFinalizacion() {
-		return fechaFinalizacion;
-	}
-
-	public void setFechaFinalizacion(String fechaFinalizacion) {
-		this.fechaFinalizacion = fechaFinalizacion;
 	}
 
 	public double getValorInicial() {
@@ -104,23 +144,7 @@ public class Anuncio {
 		return listaPujas;
 	}
 
-	// Metodo constructor
 
-	public Anuncio(String nombreProducto, String descripcion, String nombreAnunciante, String fechaPublicacion,
-			String fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
-			ArrayList<Puja> listaPujas, String codigo) {
-		super();
-		this.nombreProducto = nombreProducto;
-		this.descripcion = descripcion;
-		this.nombreAnunciante = nombreAnunciante;
-		this.fechaPublicacion = fechaPublicacion;
-		this.fechaFinalizacion = fechaFinalizacion;
-		this.valorInicial = valorInicial;
-		this.valorSuperior = valorSuperior;
-		this.tipoProducto = tipoProducto;
-		this.listaPujas = listaPujas;
-		this.codigo = codigo;
-	}
 
 
 

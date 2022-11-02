@@ -52,6 +52,9 @@ public class LoginController {
         btnTipoUsuario.getItems().clear();
         btnTipoUsuario.getItems().addAll(tipoDeUsuario);
         ModelFactoryController.crearPersona("154789854", "DANI", "123", 18, "ADMIN");
+        ModelFactoryController.crearPersona("123", "1", "1", 20, "Anunciante");
+        ModelFactoryController.crearPersona("10101010", "2", "2", 20, "Comprador");
+
     }
 
     public void setAplicacion(Aplicacion aplicacion) {
