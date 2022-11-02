@@ -122,7 +122,6 @@ public class ProductoController {
         txtCodigo.clear();
         txtPrecio.clear();
 
-
         image.setImage(null);
         fechaInicial.setValue(null);
         fechaFinal.setValue(null);
@@ -140,28 +139,31 @@ public class ProductoController {
 
         String nombreProducto = txtNombreProducto.getText();
         String descripcion = txtDescripcion.getText();
-        String fechaPublicacion;
         String codigo = txtCodigo.getText();
+        String valorInicial = this.txtPrecio.getText();
+        String tipoProducto = cmbTipoProducto.getValue();
 
-        String valorInicial = txtPrecio.getText();
-
-        TipoProducto tipoProducto;
+        LocalDate fechaPublicacion = fechaInicial.getValue();
+        LocalDate fechaFinalizacion = fechaFinal.getValue();
 
         if (anuncioSeleccion != null) {
-//            if (datosValidos(nombreProducto, descripcion, fechaPublicacion, valorInicial, tipoProducto, codigo)) {
-//
-//                anuncioSeleccion.setCodigo(codigo);
-//                anuncioSeleccion.setDescripcion(descripcion);
-//                anuncioSeleccion.setFechaPublicacion(fechaPublicacion);
-//                anuncioSeleccion.setNombreProducto(nombreProducto);
-//                anuncioSeleccion.setValorInicial(Double.parseDouble(valorInicial));
-//
-//                tablaAnuncios.refresh();
-//
-//                mostrarMensaje("Información", "Actualizar", "El anuncio ha sido actualizado.",
-//                        AlertType.CONFIRMATION);
-//
-//            }
+
+            if (datosValidos(nombreProducto, descripcion, fechaPublicacion, valorInicial, fechaFinalizacion,
+                    tipoProducto, codigo)) {
+
+                anuncioSeleccion.setCodigo(codigo);
+                anuncioSeleccion.setDescripcion(descripcion);
+                anuncioSeleccion.setFechaPublicacion(fechaPublicacion);
+                anuncioSeleccion.setFechaFinalizacion(fechaFinalizacion);
+                anuncioSeleccion.setNombreProducto(nombreProducto);
+                anuncioSeleccion.setValorInicial(Double.parseDouble(valorInicial));
+                anuncioSeleccion.setImageByte(arrayImage);
+
+                tablaAnuncios.refresh();
+
+                mostrarMensaje("Información", "Actualizar", "El anuncio ha sido actualizado.",
+                        AlertType.CONFIRMATION);
+            }
 
         } else {
             mostrarMensaje("Advertencia", "Actualizar", "No se ha seleccionado un anuncio.", AlertType.WARNING);
@@ -186,9 +188,11 @@ public class ProductoController {
         LocalDate fechaFinalizacion = fechaFinal.getValue();
 
         try {
-            if (datosValidos(nombreProducto, descripcion, fechaPublicacion, valorInicial, fechaFinalizacion, tipoProducto, codigo)) {
+            if (datosValidos(nombreProducto, descripcion, fechaPublicacion, valorInicial, fechaFinalizacion,
+                    tipoProducto, codigo)) {
                 TipoProducto tipoAux = parseToTipoProducto(tipoProducto);
-                crearAnuncio(nombreProducto, descripcion, fechaPublicacion, fechaFinalizacion, valorInicial, tipoAux, codigo);
+                crearAnuncio(nombreProducto, descripcion, fechaPublicacion, fechaFinalizacion, valorInicial, tipoAux,
+                        codigo);
                 actualizarTabla();
 
             }
@@ -239,7 +243,9 @@ public class ProductoController {
             this.arrayImage = btImagen;
             Image imageAux = new Image(new ByteArrayInputStream(btImagen));
             image.setImage(imageAux);
-        } catch (IOException e) {; }
+        } catch (IOException e) {
+            ;
+        }
 
     }
 
@@ -312,7 +318,8 @@ public class ProductoController {
         boolean flag = true;
         String notificacion = "";
 
-        if(arrayImage == null) notificacion += "Imagen no cargada\n";
+        if (arrayImage == null)
+            notificacion += "Imagen no cargada\n";
 
         if (nombreProducto == null || nombreProducto.equals("")) {
             notificacion += "Nombre del producto no tiene información\n";
@@ -406,6 +413,10 @@ public class ProductoController {
         if (anuncioSeleccion != null) {
 
             txtNombreProducto.setText(anuncioSeleccion.getNombreProducto());
+            txtDescripcion.setText(anuncioSeleccion.getDescripcion());
+            txtCodigo.setText(anuncioSeleccion.getCodigo());
+            txtPrecio.setText(anuncioSeleccion.getValorInicial() + "");
+
             fechaInicial.setValue(anuncioSeleccion.getFechaPublicacion());
             fechaFinal.setValue(anuncioSeleccion.getFechaFinalizacion());
             image.setImage(new Image(new ByteArrayInputStream(anuncioSeleccion.getImageByte())));
