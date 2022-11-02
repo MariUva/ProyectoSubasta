@@ -51,7 +51,7 @@ public class ProductoController {
     private URL location;
 
     @FXML
-    private TableColumn<String, Anuncio> columNombre;
+    private TableColumn<String, Anuncio> columCodigo;
 
     @FXML
     private DatePicker fechaInicial;
@@ -66,7 +66,7 @@ public class ProductoController {
     private TextField txtCodigo;
 
     @FXML
-    private TableColumn<String, Anuncio> columDescripcion;
+    private TableColumn<String, Anuncio> columNombre;
 
     @FXML
     private TableColumn<String, Anuncio> columPrecio;
@@ -121,12 +121,11 @@ public class ProductoController {
         txtDescripcion.clear();
         txtCodigo.clear();
         txtPrecio.clear();
-
         image.setImage(null);
         fechaInicial.setValue(null);
         fechaFinal.setValue(null);
         cmbTipoProducto.setValue("Tipos de productos");
-        // Falta limpiar el combo box de tipo producto, las fechas y la imagen
+
         txtCodigo.setDisable(false);
 
     }
@@ -157,6 +156,9 @@ public class ProductoController {
                 anuncioSeleccion.setFechaFinalizacion(fechaFinalizacion);
                 anuncioSeleccion.setNombreProducto(nombreProducto);
                 anuncioSeleccion.setValorInicial(Double.parseDouble(valorInicial));
+
+
+            //    anuncioSeleccion.setTipoProducto(tipoProducto);
                 anuncioSeleccion.setImageByte(arrayImage);
 
                 tablaAnuncios.refresh();
@@ -257,7 +259,7 @@ public class ProductoController {
             precioAux = Double.parseDouble(valorInicial);
         } catch (Exception e) {
 
-            mostrarMensaje("Advertencia", "La informaciï¿½n del anuncio es invalida",
+            mostrarMensaje("Advertencia", "La información del anuncio es invalida",
                     "Ingrese un valor numerico en el campo de precio", AlertType.WARNING);
         }
         return precioAux;
@@ -310,7 +312,7 @@ public class ProductoController {
 
     /*
      * Metodo que permite verificar si todos los campos de texto han sido
-     * dilingeciados
+     * dilingenciados
      */
     private boolean datosValidos(String nombreProducto, String descripcion, LocalDate fechaPublicacion,
             String valorInicial, LocalDate fechaFinalizacion, String tipoProducto, String codigo) {
@@ -339,27 +341,27 @@ public class ProductoController {
         }
 
         if (fechaFinalizacion == null) {
-            notificacion += "La fecha de finalización producto no tiene información\n";
+            notificacion += "La fecha de finalización del producto no tiene información\n";
 
         }
         if (tipoProducto == null || tipoProducto.equals("")) {
-            notificacion += "El tipo de producto no tiene información\n";
+            notificacion += "No ha seleccionado un tipo de producto\n";
 
         }
 
         if (valorInicial.equals("")) {
             flag = false;
-            notificacion += "El precio del producton o tiene información\n";
+            notificacion += "El precio del producto no tiene información\n";
 
         }
-//        if (flag) {
-//            try {
-//                double valorInicial = Double.parseDouble(valorInicial);
-//            } catch (Exception e) {
-//                notificacion += "El precio debe de contener valores numericos";
-//            }
-//
-//        }
+        if (flag) {
+            try {
+                double precioAux = Double.parseDouble(valorInicial);
+            } catch (Exception e) {
+                notificacion += "El precio debe de contener valores numericos";
+            }
+
+        }
 
         if (notificacion.equals("")) {
             return true;
@@ -371,6 +373,9 @@ public class ProductoController {
 
     }
 
+    /*
+     * Metodo que permite eliminar un anuncio
+     */
     @FXML
     void btnEliminarAnuncio(ActionEvent event) {
 
@@ -416,11 +421,11 @@ public class ProductoController {
             txtDescripcion.setText(anuncioSeleccion.getDescripcion());
             txtCodigo.setText(anuncioSeleccion.getCodigo());
             txtPrecio.setText(anuncioSeleccion.getValorInicial() + "");
-
             fechaInicial.setValue(anuncioSeleccion.getFechaPublicacion());
             fechaFinal.setValue(anuncioSeleccion.getFechaFinalizacion());
             image.setImage(new Image(new ByteArrayInputStream(anuncioSeleccion.getImageByte())));
 
+            txtCodigo.setDisable(true);
         }
 
     }
@@ -435,8 +440,8 @@ public class ProductoController {
     @FXML
     void initialize() {
 
+        this.columCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         this.columNombre.setCellValueFactory(new PropertyValueFactory<>("nombreProducto"));
-        this.columDescripcion.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
         this.columPrecio.setCellValueFactory(new PropertyValueFactory<>("valorInicial"));
 
         tablaAnuncios.getSelectionModel().selectedItemProperty()
