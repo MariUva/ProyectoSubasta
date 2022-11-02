@@ -207,7 +207,7 @@ public class Subasta {
     // -----------------------CREAR ANUNCIO----------------
     public Anuncio agregarAnuncio(String nombreProducto, String descripcion,
             LocalDate fechaPublicacion, LocalDate fechaFinalizacion, double valorInicial,
-            TipoProducto tipoProducto, String codigo) {
+            TipoProducto tipoProducto, String codigo, byte[] array) {
 
         if (existeAnuncio(codigo)) {
             return null;
@@ -222,6 +222,7 @@ public class Subasta {
             nuevoAnuncio.setTipoProducto(tipoProducto);
             nuevoAnuncio.setValorInicial(valorInicial);
             nuevoAnuncio.setCodigo(codigo);
+            nuevoAnuncio.setImageByte(array);
 
             getListaAnuncios().add(nuevoAnuncio);
             return nuevoAnuncio;

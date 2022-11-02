@@ -245,7 +245,7 @@ public class ModelFactoryController {
         Anuncio anuncio = null;
         try {
             anuncio = getSubasta().agregarAnuncio(nombreProducto, descripcion, fechaPublicacion,
-                    fechaFinalizacion, valorInicial, tipoProducto, codigo);
+                    fechaFinalizacion, valorInicial, tipoProducto, codigo, array);
         } catch (Exception e) {
             e.getMessage();
 

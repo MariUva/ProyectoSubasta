@@ -406,6 +406,9 @@ public class ProductoController {
         if (anuncioSeleccion != null) {
 
             txtNombreProducto.setText(anuncioSeleccion.getNombreProducto());
+            fechaInicial.setValue(anuncioSeleccion.getFechaPublicacion());
+            fechaFinal.setValue(anuncioSeleccion.getFechaFinalizacion());
+            image.setImage(new Image(new ByteArrayInputStream(anuncioSeleccion.getImageByte())));
 
         }
 
