@@ -122,6 +122,11 @@ public class ProductoController {
         txtCodigo.clear();
         txtPrecio.clear();
 
+
+        image.setImage(null);
+        fechaInicial.setValue(null);
+        fechaFinal.setValue(null);
+        cmbTipoProducto.setValue("Tipos de productos");
         // Falta limpiar el combo box de tipo producto, las fechas y la imagen
         txtCodigo.setDisable(false);
 
@@ -416,9 +421,9 @@ public class ProductoController {
     @FXML
     void initialize() {
 
-        this.columNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        this.columNombre.setCellValueFactory(new PropertyValueFactory<>("nombreProducto"));
         this.columDescripcion.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
-        this.columPrecio.setCellValueFactory(new PropertyValueFactory<>("precio"));
+        this.columPrecio.setCellValueFactory(new PropertyValueFactory<>("valorInicial"));
 
         tablaAnuncios.getSelectionModel().selectedItemProperty()
                 .addListener((obs, olSelection, newSelection) -> {
