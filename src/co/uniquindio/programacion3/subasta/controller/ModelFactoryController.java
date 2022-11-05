@@ -27,7 +27,6 @@ public class ModelFactoryController {
         return SingletonHolder.eINSTANCE;
     }
 
-
     public ModelFactoryController() {
 
         // 1. inicializar datos y luego guardarlo en archivos
@@ -123,6 +122,18 @@ public class ModelFactoryController {
         persona.setNombre("Ana");
 
         subasta.getListaPersonas().add(persona);
+
+        Anuncio anuncio = new Anuncio();
+        anuncio.setCodigo("12345");
+        anuncio.setDescripcion("Producto para la iluminaicon del hogar");
+        // anuncio.setFechaFinalizacion(fechaFinalizacion);
+        // anuncio.setFechaPublicacion(fechaPublicacion);
+        // anuncio.setImageByte(imageByte);
+        anuncio.setNombreProducto("Lampara");
+        // anuncio.setTipoProducto("Hogar");
+        anuncio.setValorInicial(100.000);
+
+        subasta.getListaAnuncios().add(anuncio);
 
         try {
             Persistencia.guardarPersonas(subasta.getListaPersonas());

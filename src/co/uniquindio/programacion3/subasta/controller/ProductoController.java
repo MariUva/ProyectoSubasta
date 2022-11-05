@@ -157,8 +157,7 @@ public class ProductoController {
                 anuncioSeleccion.setNombreProducto(nombreProducto);
                 anuncioSeleccion.setValorInicial(Double.parseDouble(valorInicial));
 
-
-            //    anuncioSeleccion.setTipoProducto(tipoProducto);
+                anuncioSeleccion.setTipoProducto(parseToTipoProducto(tipoProducto));
                 anuncioSeleccion.setImageByte(arrayImage);
 
                 tablaAnuncios.refresh();
@@ -173,6 +172,54 @@ public class ProductoController {
         }
 
     }
+
+    /*
+     * Recibe un tipo producto y devuelve un string
+     */
+    private String parseTipoProductoToString(TipoProducto tipo) {
+
+        if (tipo == TipoProducto.BIEN_RAIZ) {
+            return "BIEN_RAIZ";
+        }
+
+        if (tipo == TipoProducto.DEPORTES) {
+            return "DEPORTES";
+        }
+        if (tipo == TipoProducto.HOGAR) {
+            return "HOGAR";
+        }
+        if (tipo == TipoProducto.TECNOLOGIA) {
+            return "TECNOLOGIA";
+        }
+        if (tipo == TipoProducto.VEHICULOS) {
+            return "VEHICULOS";
+        }
+
+        return null;
+    }
+
+    /*
+     * Metodo que covierte un String a a un tipo Producto
+     */
+//    private TipoProducto toStringTipoProducto(String tipoProducto) {
+//
+//        if (tipoProducto.equalsIgnoreCase("HOGAR"))
+//            return TipoProducto.HOGAR;
+//
+//        if (tipoProducto.equalsIgnoreCase("TECNOLOGIA"))
+//            return TipoProducto.TECNOLOGIA;
+//
+//        if (tipoProducto.equalsIgnoreCase("DEPORTES"))
+//            return TipoProducto.DEPORTES;
+//
+//        if (tipoProducto.equalsIgnoreCase("VEHICULOS"))
+//            return TipoProducto.VEHICULOS;
+//
+//        if (tipoProducto.equalsIgnoreCase("BIEN RAIZ"))
+//            return TipoProducto.BIEN_RAIZ;
+//
+//        return null;
+//    }
 
     /*
      * Metodo que permite agregar un Anuncio
@@ -193,6 +240,7 @@ public class ProductoController {
             if (datosValidos(nombreProducto, descripcion, fechaPublicacion, valorInicial, fechaFinalizacion,
                     tipoProducto, codigo)) {
                 TipoProducto tipoAux = parseToTipoProducto(tipoProducto);
+
                 crearAnuncio(nombreProducto, descripcion, fechaPublicacion, fechaFinalizacion, valorInicial, tipoAux,
                         codigo);
                 actualizarTabla();
@@ -208,19 +256,19 @@ public class ProductoController {
      */
     public TipoProducto parseToTipoProducto(String tipoAux) {
         switch (tipoAux) {
-            case "Tecnologia":
+            case "TECNOLOGIA":
                 return TipoProducto.TECNOLOGIA;
 
-            case "Hogar":
+            case "HOGAR":
                 return TipoProducto.HOGAR;
 
-            case "Deportes":
+            case "DEPORTES":
                 return TipoProducto.DEPORTES;
 
-            case "Vehiculos":
+            case "VEHICULOS":
                 return TipoProducto.VEHICULOS;
 
-            case "Bien raiz":
+            case "BIEN_RAIZ":
                 return TipoProducto.BIEN_RAIZ;
             default:
                 return null;
@@ -423,8 +471,8 @@ public class ProductoController {
             txtPrecio.setText(anuncioSeleccion.getValorInicial() + "");
             fechaInicial.setValue(anuncioSeleccion.getFechaPublicacion());
             fechaFinal.setValue(anuncioSeleccion.getFechaFinalizacion());
+            cmbTipoProducto.setValue(parseTipoProductoToString(anuncioSeleccion.getTipoProducto()));
             image.setImage(new Image(new ByteArrayInputStream(anuncioSeleccion.getImageByte())));
-
             txtCodigo.setDisable(true);
         }
 
