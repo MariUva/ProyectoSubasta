@@ -1,0 +1,8 @@
+oct 22, 2022 9:41:02 PM co.uniquindio.programacion3.subasta.persistence.ArchivoUtil guardarRegistroLog
+INFORMACI?N: Anunciante Ingresa,Un anunciante ha ingresado,2022-10-22
+oct 22, 2022 9:41:19 PM co.uniquindio.programacion3.subasta.persistence.ArchivoUtil guardarRegistroLog
+INFORMACI?N: Comprador Ingresa,Un comprador ha ingresado,2022-10-22
+oct 22, 2022 9:41:35 PM co.uniquindio.programacion3.subasta.persistence.ArchivoUtil guardarRegistroLog
+INFORMACI?N: Anunciante Ingresa,Un anunciante ha ingresado,2022-10-22
+oct 22, 2022 9:44:13 PM co.uniquindio.programacion3.subasta.persistence.ArchivoUtil guardarRegistroLog
+INFORMACI?N: Anunciante Ingresa,Un anunciante ha ingresado,2022-10-22
