@@ -25,12 +25,7 @@
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnCrearAnuncio" layoutX="13.0" layoutY="212.0" mnemonicParsing="false" onAction="#ventanaCrearAnuncio" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="Crear anuncio" textFill="#c3c0c0">
-                           <font>
-                              <Font name="System Bold" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="btnCrearProducto" layoutX="13.0" layoutY="270.0" mnemonicParsing="false" onAction="#ventanaCrearProducto" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="Crear producto" textFill="#c3c0c0">
+                        <Button fx:id="btnCrearProducto" layoutX="13.0" layoutY="270.0" mnemonicParsing="false" onAction="#ventanaCrearProducto" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #252626;" stylesheets="@../styles/StyleBoton.css" text="Crear anuncio" textFill="#c3c0c0">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>

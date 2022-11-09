@@ -70,7 +70,6 @@ public class PrincipalAnuncianteController {
     @FXML
     void initialize() {
 
-
     }
 
 	public void setAplicacion(Aplicacion aplicacion) {

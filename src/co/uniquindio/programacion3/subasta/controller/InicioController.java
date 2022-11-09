@@ -11,18 +11,19 @@ public class InicioController {
 
 	private Aplicacion aplicacion;
 
-    @FXML
-    private ResourceBundle resources;
+	@FXML
+	private ResourceBundle resources;
 
-    @FXML
-    private URL location;
+	@FXML
+	private URL location;
 
-    @FXML
-    private Button btnAnunciante;
+	@FXML
+	private Button btnAnunciante;
 
-    @FXML
-    private Button btnComprador;
+	@FXML
+	private Button btnComprador;
 
+<<<<<<< HEAD
     @FXML
     void abrirPrincipalAnunciante(ActionEvent event) {
     	aplicacion.ventanaPrincipalAnunciante();
@@ -34,14 +35,19 @@ public class InicioController {
     	aplicacion.ventanaPrincipalComprador();
     	ModelFactoryController.guardarRegistroLog("Un comprador ha ingresado", 1, "Comprador Ingresa");
     }
+=======
+	@FXML
+	void abrirLogin(ActionEvent event) {
+		aplicacion.ventanaLogin();
+	}
 
-    @FXML
-    void initialize() {
+	@FXML
+	void initialize() {
+>>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 
-    }
+	}
 
 	public void setAplicacion(Aplicacion aplicacion) {
 		this.aplicacion = aplicacion;
 	}
 }
-

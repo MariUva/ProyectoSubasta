@@ -117,34 +117,56 @@ public class ArchivoUtil {
 
 	private static void cargarFechaSistema() {
 
+<<<<<<< HEAD
 		String diaN = "";
 		String mesN = "";
 		String aﾃｱoN = "";
+=======
+        String diaN = "";
+        String mesN = "";
+        String a�oN = "";
+>>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 
-		Calendar cal1 = Calendar.getInstance();
+        Calendar cal1 = Calendar.getInstance();
 
+<<<<<<< HEAD
 		int dia = cal1.get(Calendar.DATE);
 		int mes = cal1.get(Calendar.MONTH) + 1;
 		int aﾃｱo = cal1.get(Calendar.YEAR);
 		int hora = cal1.get(Calendar.HOUR);
 		int minuto = cal1.get(Calendar.MINUTE);
+=======
+        int dia = cal1.get(Calendar.DATE);
+        int mes = cal1.get(Calendar.MONTH) + 1;
+        int a�o = cal1.get(Calendar.YEAR);
+        int hora = cal1.get(Calendar.HOUR);
+        int minuto = cal1.get(Calendar.MINUTE);
+>>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 
-		if (dia < 10) {
-			diaN += "0" + dia;
-		} else {
-			diaN += "" + dia;
-		}
-		if (mes < 10) {
-			mesN += "0" + mes;
-		} else {
-			mesN += "" + mes;
-		}
+        if (dia < 10) {
+            diaN += "0" + dia;
+        } else {
+            diaN += "" + dia;
+        }
+        if (mes < 10) {
+            mesN += "0" + mes;
+        } else {
+            mesN += "" + mes;
+        }
 
+<<<<<<< HEAD
 		// fecha_Actual+= a�ｿｽo+"-"+mesN+"-"+ diaN;
 		// fechaSistema = a�ｿｽo+"-"+mesN+"-"+diaN+"-"+hora+"-"+minuto;
 		fechaSistema = aﾃｱo + "-" + mesN + "-" + diaN;
 		// horaFechaSistema = hora+"-"+minuto;
 	}
+=======
+        // fecha_Actual+= a�o+"-"+mesN+"-"+ diaN;
+        // fechaSistema = a�o+"-"+mesN+"-"+diaN+"-"+hora+"-"+minuto;
+        fechaSistema = a�o + "-" + mesN + "-" + diaN;
+        // horaFechaSistema = hora+"-"+minuto;
+    }
+>>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 
 	// ------------------------------------SERIALIZACI�ｿｽN y XML
 	/**
@@ -155,7 +177,7 @@ public class ArchivoUtil {
 	 * @throws IOException
 	 */
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings ("unchecked")
 	public static Object cargarRecursoSerializado(String rutaArchivo) throws Exception {
 		Object aux = null;
 		// Empresa empresa = null;
@@ -209,5 +231,4 @@ public class ArchivoUtil {
 		codificadorXML.close();
 
 	}
-
 }
