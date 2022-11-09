@@ -1,6 +1,7 @@
 package co.uniquindio.programacion3.subasta.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import co.uniquindio.programacion3.subasta.modell.Subasta;
 =======
 import java.io.IOException;
@@ -14,13 +15,11 @@ import co.uniquindio.programacion3.subasta.modell.TipoProducto;
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 import co.uniquindio.programacion3.subasta.persistence.Persistencia;
 
+=======
+>>>>>>> parent of b92a5be (Actualizacion)
 public class ModelFactoryController {
-	static Subasta subasta = new Subasta();
-	
-	public static void guardarRegistroLog(String mensajeLog, int nivel, String accion){
-		Persistencia.guardarRegistroLog(mensajeLog, nivel, accion);
-	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	public static void cargarDatos() {
 		subasta.setListaAnunciantes(Persistencia.cargarAnunciantes());
@@ -359,4 +358,7 @@ public class ModelFactoryController {
     }
 
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
+=======
+
+>>>>>>> parent of b92a5be (Actualizacion)
 }

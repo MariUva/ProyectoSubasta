@@ -1,11 +1,14 @@
 package co.uniquindio.programacion3.subasta.modell;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import java.time.LocalDate;
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 import java.util.ArrayList;
 
+=======
+>>>>>>> parent of b92a5be (Actualizacion)
 public class Anuncio {
 
 	// Declaracion de atributos
@@ -18,6 +21,7 @@ public class Anuncio {
 	double valorInicial;
 	double valorSuperior;
 	TipoProducto tipoProducto;
+<<<<<<< HEAD
 	ArrayList<Pujas> listaPujas;
 =======
 	private String nombreProducto;
@@ -52,6 +56,9 @@ public class Anuncio {
 
 
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
+=======
+	Pujas listaPujas;
+>>>>>>> parent of b92a5be (Actualizacion)
 
 	// Metodos getters and setters
 
@@ -138,11 +145,15 @@ public class Anuncio {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public ArrayList<Pujas> getListaPujas() {
+=======
+	public Pujas getListaPujas() {
+>>>>>>> parent of b92a5be (Actualizacion)
 		return listaPujas;
 	}
 
-	public void setListaPujas(ArrayList<Pujas> listaPujas) {
+	public void setListaPujas(Pujas listaPujas) {
 		this.listaPujas = listaPujas;
 =======
 	public void setListaPujas(ArrayList<Puja> listaPujas2) {
@@ -168,7 +179,7 @@ public class Anuncio {
 	// Metodo constructor
 	public Anuncio(String nombreProdcuto, String descripcion, String nombreAnunciante, String fechaPpublicacion,
 			String fechaFinalizacion, double valorInicial, double valorSuperior, TipoProducto tipoProducto,
-			ArrayList<Pujas> listaPujas) {
+			Pujas listaPujas) {
 		super();
 		this.nombreProdcuto = nombreProdcuto;
 		this.descripcion = descripcion;
@@ -180,6 +191,7 @@ public class Anuncio {
 		this.tipoProducto = tipoProducto;
 		this.listaPujas = listaPujas;
 	}
+<<<<<<< HEAD
 	
 =======
 	public ArrayList<Puja> getListaPujas() {
@@ -192,6 +204,9 @@ public class Anuncio {
 
 
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
+=======
+
+>>>>>>> parent of b92a5be (Actualizacion)
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -211,7 +226,6 @@ public class Anuncio {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {

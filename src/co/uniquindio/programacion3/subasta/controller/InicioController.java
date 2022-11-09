@@ -27,13 +27,11 @@ public class InicioController {
     @FXML
     void abrirPrincipalAnunciante(ActionEvent event) {
     	aplicacion.ventanaPrincipalAnunciante();
-    	ModelFactoryController.guardarRegistroLog("Un anunciante ha ingresado", 1, "Anunciante Ingresa");
     }
 
     @FXML
     void abrirPrincipalComprador(ActionEvent event) {
     	aplicacion.ventanaPrincipalComprador();
-    	ModelFactoryController.guardarRegistroLog("Un comprador ha ingresado", 1, "Comprador Ingresa");
     }
 =======
 	@FXML

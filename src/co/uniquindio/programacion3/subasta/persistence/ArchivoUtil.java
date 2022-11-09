@@ -6,6 +6,7 @@ import java.beans.XMLEncoder;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -120,19 +121,23 @@ public class ArchivoUtil {
 <<<<<<< HEAD
 		String diaN = "";
 		String mesN = "";
+<<<<<<< HEAD
 		String aﾃｱoN = "";
 =======
         String diaN = "";
         String mesN = "";
         String a�oN = "";
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
+=======
+		String añoN = "";
+>>>>>>> parent of b92a5be (Actualizacion)
 
         Calendar cal1 = Calendar.getInstance();
 
 <<<<<<< HEAD
 		int dia = cal1.get(Calendar.DATE);
 		int mes = cal1.get(Calendar.MONTH) + 1;
-		int aﾃｱo = cal1.get(Calendar.YEAR);
+		int año = cal1.get(Calendar.YEAR);
 		int hora = cal1.get(Calendar.HOUR);
 		int minuto = cal1.get(Calendar.MINUTE);
 =======
@@ -155,9 +160,15 @@ public class ArchivoUtil {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		// fecha_Actual+= a�ｿｽo+"-"+mesN+"-"+ diaN;
 		// fechaSistema = a�ｿｽo+"-"+mesN+"-"+diaN+"-"+hora+"-"+minuto;
 		fechaSistema = aﾃｱo + "-" + mesN + "-" + diaN;
+=======
+		// fecha_Actual+= a�o+"-"+mesN+"-"+ diaN;
+		// fechaSistema = a�o+"-"+mesN+"-"+diaN+"-"+hora+"-"+minuto;
+		fechaSistema = año + "-" + mesN + "-" + diaN;
+>>>>>>> parent of b92a5be (Actualizacion)
 		// horaFechaSistema = hora+"-"+minuto;
 	}
 =======
@@ -168,7 +179,7 @@ public class ArchivoUtil {
     }
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
 
-	// ------------------------------------SERIALIZACI�ｿｽN y XML
+	// ------------------------------------SERIALIZACI�N y XML
 	/**
 	 * Escribe en el fichero que se le pasa el objeto que se le envia
 	 *

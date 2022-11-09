@@ -1,6 +1,7 @@
 package co.uniquindio.programacion3.subasta.modell;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 public class Compradores extends Persona{
 =======
 public class Compradores extends Persona {
@@ -9,6 +10,9 @@ public class Compradores extends Persona {
 		super(documento, nombre, clave, edad, tipoDeUsuario);
 	}
 >>>>>>> aa609470ef03d550892fd318f96be072b871e8bd
+=======
+public class Compradores {
+>>>>>>> parent of b92a5be (Actualizacion)
 
 	// Declaracion de atributos
 	int numeroOfertas;
